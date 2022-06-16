@@ -11,10 +11,11 @@ public class CharacterController2D : MonoBehaviour
 
     public LayerMask GroundLayer;
 
+    [HideInInspector]
     private bool IsGrounded;
-    public bool IsWalking;
+    [HideInInspector] public bool IsWalking;
     private bool IsFlipped;
-    public bool CanSprint;
+    [HideInInspector] public bool CanSprint;
 
     private float MovementSpeed;
     private float WalkSpeed = 2.8f;

@@ -10,12 +10,8 @@ public class StatsController : MonoBehaviour
 
     private int Health;
     private int HealthMax = 3;
-    public int Stamina;
-    private int StaminaMax;
-
-    private int StaminaLength = 6;
-    private int StaminaRegenTime = 10;
-    private int StaminaRegen;
+    public int Stamina = 0;
+    [HideInInspector] public int StaminaMax = 360;
 
     private bool CanRegen;
 
@@ -25,9 +21,6 @@ public class StatsController : MonoBehaviour
 
         Health = HealthMax;
         Stamina = StaminaMax;
-
-        StaminaMax = StaminaLength * 60;
-        StaminaRegen = StaminaMax / StaminaRegenTime;
     }
     
     void FixedUpdate()
@@ -52,13 +45,13 @@ public class StatsController : MonoBehaviour
 
     void DrainStamina()
     {
-        Wait(StaminaMax / (StaminaLength - 1) / 360);
+        Wait(StaminaMax / 360 / 6);
         Stamina--;
     }
 
     void RegenStamina()
     {
-        Wait(StaminaMax / (StaminaRegenTime - 1) / 360);
+        Wait(StaminaMax / 360 / 10);
         Stamina++;
     }
 
