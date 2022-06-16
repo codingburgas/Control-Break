@@ -16,13 +16,16 @@ public class CharacterController2D : MonoBehaviour
     public LayerMask GroundLayer;
 
     private bool IsGrounded;
+    public bool IsWalking;
+    private bool IsFlipped;
 
-    private float MovementSpeed = 7.0f;
+    private float MovementSpeed = 2.8f;
     private float JumpForce = 5.0f;
 
     void Update()
     {
         IsGrounded = CollidesWithGround(this.transform);
+        IsWalking = GetMovement() != Mathf.Floor(0);
 
         Vector2 Movement = new Vector2(GetMovement(), 0f);
 
@@ -30,12 +33,23 @@ public class CharacterController2D : MonoBehaviour
 
         if (Input.GetKeyDown(JumpKey))
             Jump();
+        
+        if (Input.GetKeyDown(LeftKey) && !IsFlipped)
+            Flip();
+        if (Input.GetKeyDown(RightKey) && IsFlipped)
+            Flip();
     }
 
     void Jump()
     {
         if (IsGrounded)
             this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
+    }
+
+    void Flip()
+    {
+        IsFlipped = !IsFlipped;
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
     }
 
     int GetMovement()
@@ -51,7 +65,7 @@ public class CharacterController2D : MonoBehaviour
 
     bool CollidesWithGround(Transform Object)
     {
-        Vector2 GroundCheck = new Vector2( Object.position.x, Object.position.y - 1.0f );
+        Vector2 GroundCheck = new Vector2( Object.position.x, Object.position.y - 2.0f );
         return Physics2D.OverlapCircle(GroundCheck, 0.2f, GroundLayer);
     }
 }
