@@ -6,15 +6,15 @@ public class AnimationController : MonoBehaviour
 {
     private Animator ObjectAnimator;
 
-    private string MainPlayer = "Player";
+    private string Player = "Player";
 
     private CharacterController2D CharacterController;
 
     void Start()
     {
-        ObjectAnimator = GameObject.Find(MainPlayer).GetComponent<Animator>();;
+        ObjectAnimator = GameObject.Find(Player).GetComponent<Animator>();
         
-        CharacterController = GameObject.Find(MainPlayer).GetComponent<CharacterController2D>();
+        CharacterController = GameObject.Find(Player).GetComponent<CharacterController2D>();
     }
 
     void Update()

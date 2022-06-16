@@ -4,22 +4,21 @@ using UnityEngine;
 
 public class CharacterController2D : MonoBehaviour
 {
-    [SerializeField]
-    KeyCode JumpKey;
-
-    [SerializeField]
-    KeyCode LeftKey;
-
-    [SerializeField]
-    KeyCode RightKey;
+    public KeyCode SprintKey;
+    public KeyCode JumpKey;
+    public KeyCode LeftKey;
+    public KeyCode RightKey;
 
     public LayerMask GroundLayer;
 
     private bool IsGrounded;
     public bool IsWalking;
     private bool IsFlipped;
+    public bool CanSprint;
 
-    private float MovementSpeed = 2.8f;
+    private float MovementSpeed;
+    private float WalkSpeed = 2.8f;
+    private float SprintSpeed = 6.0f;
     private float JumpForce = 5.0f;
 
     void Update()
@@ -31,13 +30,27 @@ public class CharacterController2D : MonoBehaviour
 
         transform.position += (Vector3)Movement * Time.deltaTime * MovementSpeed;
 
+        if (Input.GetKey(SprintKey) && CanSprint)
+            Sprint();
+        else
+            Walk();
         if (Input.GetKeyDown(JumpKey))
             Jump();
-        
+
         if (Input.GetKeyDown(LeftKey) && !IsFlipped)
             Flip();
         if (Input.GetKeyDown(RightKey) && IsFlipped)
             Flip();
+    }
+
+    void Walk()
+    {
+        MovementSpeed = WalkSpeed;
+    }
+
+    void Sprint()
+    {
+        MovementSpeed = SprintSpeed;
     }
 
     void Jump()
