@@ -10,7 +10,7 @@ public class StatsController : MonoBehaviour
 
     private int Health;
     private int HealthMax = 3;
-    public int Stamina = 0;
+    [HideInInspector] public int Stamina = 0;
     [HideInInspector] public int StaminaMax = 360;
 
     private bool CanRegen;
