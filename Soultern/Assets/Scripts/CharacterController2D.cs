@@ -11,7 +11,6 @@ public class CharacterController2D : MonoBehaviour
 
     public LayerMask GroundLayer;
 
-    [HideInInspector]
     private bool IsGrounded;
     [HideInInspector] public bool IsWalking;
     private bool IsFlipped;

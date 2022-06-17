@@ -8,8 +8,8 @@ public class StatsController : MonoBehaviour
 
     private string Player = "Player";
 
-    private int Health;
-    private int HealthMax = 3;
+    [HideInInspector] public int Health;
+    [HideInInspector] public int HealthMax = 3;
     [HideInInspector] public int Stamina = 0;
     [HideInInspector] public int StaminaMax = 360;
 

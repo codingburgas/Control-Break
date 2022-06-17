@@ -8,8 +8,8 @@ public class CameraController2D : MonoBehaviour
 
     private Transform Player;
 
-    public Vector3 CameraOffset;
-    public float SmoothEffect = 0.25f;
+    private Vector3 CameraOffset = new Vector3(0, 2, -10);
+    private float SmoothEffect = 0.2125f;
 
     void Start()
     {
