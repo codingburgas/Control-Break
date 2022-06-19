@@ -19,3 +19,13 @@ function topFunction() {
 }
 
 
+$(window).bind("resize", function () {
+  console.log($(this).width())
+  if ($(this).width() < 1206) {
+      $('div').removeClass('col-md-4').addClass('col-md-4-fixed')
+  } else {
+      $('div').removeClass('col-md-4-fixed').addClass('col-md-4')
+  }
+}).trigger('resize');
+
+
