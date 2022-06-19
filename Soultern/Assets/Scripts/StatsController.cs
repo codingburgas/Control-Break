@@ -5,6 +5,7 @@ using UnityEngine;
 public class StatsController : MonoBehaviour
 {
     private CharacterController2D CharacterController;
+    private ExtraFunctions ExtraFunctions;
 
     private string Player = "Player";
 
@@ -18,6 +19,7 @@ public class StatsController : MonoBehaviour
     void Start()
     {
         CharacterController = GameObject.Find(Player).GetComponent<CharacterController2D>();
+        ExtraFunctions = GameObject.Find("ExtraFunctions").GetComponent<ExtraFunctions>();
 
         Health = HealthMax;
         Stamina = StaminaMax;
@@ -45,18 +47,13 @@ public class StatsController : MonoBehaviour
 
     void DrainStamina()
     {
-        Wait(StaminaMax / 360 / 6);
+        ExtraFunctions.Wait(StaminaMax / 360 / 6);
         Stamina--;
     }
 
     void RegenStamina()
     {
-        Wait(StaminaMax / 360 / 10);
+        ExtraFunctions.Wait(StaminaMax / 360 / 10);
         Stamina++;
-    }
-
-    IEnumerator Wait(int time)
-    {
-        yield return new WaitForSeconds(time);
     }
 }

@@ -28,7 +28,7 @@ public class DeathManager : MonoBehaviour
             IsDead = true;
     }
 
-    void Respawn()
+    public void Revive()
     {
         StatsController.Health = StatsController.HealthMax;
         StatsController.Stamina = StatsController.StaminaMax;

@@ -13,13 +13,15 @@ public class CharacterController2D : MonoBehaviour
 
     private bool IsGrounded;
     [HideInInspector] public bool IsWalking;
-    private bool IsFlipped;
+    [HideInInspector] public bool IsFlipped;
     [HideInInspector] public bool CanSprint;
 
     private float MovementSpeed;
     private float WalkSpeed = 2.8f;
     private float SprintSpeed = 6.0f;
     private float JumpForce = 5.0f;
+
+    [HideInInspector] public Vector3 Checkpoint;
 
     void Update()
     {
@@ -59,7 +61,7 @@ public class CharacterController2D : MonoBehaviour
             this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
     }
 
-    void Flip()
+    public void Flip()
     {
         IsFlipped = !IsFlipped;
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
@@ -80,5 +82,11 @@ public class CharacterController2D : MonoBehaviour
     {
         Vector2 GroundCheck = new Vector2( Object.position.x, Object.position.y - 2.0f );
         return Physics2D.OverlapCircle(GroundCheck, 0.2f, GroundLayer);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Checkpoint"))
+            Checkpoint = transform.position + new Vector3(0f, 1.2f, 0f);
     }
 }
