@@ -9,10 +9,8 @@ public class ExtraFunctions : MonoBehaviour
         Transform[] Objects = Resources.FindObjectsOfTypeAll<Transform>() as Transform[];
 
         for (int i = 0; i < Objects.Length; i++)
-        {
             if (Objects[i].name == name)
                 return Objects[i].gameObject;
-        }
 
         return null;
     }

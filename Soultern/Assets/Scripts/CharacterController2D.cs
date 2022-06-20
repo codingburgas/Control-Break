@@ -11,10 +11,10 @@ public class CharacterController2D : MonoBehaviour
 
     public LayerMask GroundLayer;
 
-    private bool IsGrounded;
+    [HideInInspector] public bool IsGrounded;
     [HideInInspector] public bool IsWalking;
     [HideInInspector] public bool IsFlipped;
-    [HideInInspector] public bool CanSprint;
+    [HideInInspector] public bool CanUse;
 
     private float MovementSpeed;
     private float WalkSpeed = 2.8f;
@@ -32,11 +32,12 @@ public class CharacterController2D : MonoBehaviour
 
         transform.position += (Vector3)Movement * Time.deltaTime * MovementSpeed;
 
-        if (Input.GetKey(SprintKey) && CanSprint)
+        if (Input.GetKey(SprintKey) && CanUse)
             Sprint();
         else
             Walk();
-        if (Input.GetKeyDown(JumpKey))
+        
+        if (Input.GetKeyDown(JumpKey) && IsGrounded && CanUse)
             Jump();
 
         if (Input.GetKeyDown(LeftKey) && !IsFlipped)
@@ -57,8 +58,7 @@ public class CharacterController2D : MonoBehaviour
 
     void Jump()
     {
-        if (IsGrounded)
-            this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
+        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
     }
 
     public void Flip()
@@ -67,7 +67,7 @@ public class CharacterController2D : MonoBehaviour
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
     }
 
-    int GetMovement()
+    public int GetMovement()
     {
         int result = 0;
         if (Input.GetKey(LeftKey))

@@ -11,8 +11,11 @@ public class StatsController : MonoBehaviour
 
     [HideInInspector] public int Health;
     [HideInInspector] public int HealthMax = 3;
-    [HideInInspector] public int Stamina = 0;
+    // [HideInInspector]
+    public int Stamina = 0;
     [HideInInspector] public int StaminaMax = 360;
+
+    private int JumpDrain = 90;
 
     private bool CanRegen;
 
@@ -32,23 +35,42 @@ public class StatsController : MonoBehaviour
         else
             CanRegen = false;
 
-        CharacterController.CanSprint = Stamina > 0;
+        CharacterController.CanUse = Stamina > 0;
 
         if (Input.GetKey(CharacterController.SprintKey))
         {
-            if (CharacterController.CanSprint)
+            if (CharacterController.CanUse)
+            {
+                CanRegen = false;
                 DrainStamina();
-            CanRegen = false;
+            }
         }
 
-        if (CanRegen)
+        if (CanRegen && Mathf.Abs(CharacterController.GetMovement()) < 0.1f && CharacterController.IsGrounded)
             RegenStamina();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(CharacterController.JumpKey))
+        {
+            if (CharacterController.IsGrounded && CharacterController.CanUse)
+            {
+                CanRegen = false;
+                DrainJumpStamina();
+            }
+        }
     }
 
     void DrainStamina()
     {
         ExtraFunctions.Wait(StaminaMax / 360 / 6);
         Stamina--;
+    }
+
+    void DrainJumpStamina()
+    {
+        Stamina -= JumpDrain;
     }
 
     void RegenStamina()
