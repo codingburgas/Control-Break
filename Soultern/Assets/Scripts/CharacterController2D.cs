@@ -78,6 +78,11 @@ public class CharacterController2D : MonoBehaviour
         return result;
     }
 
+    public Vector3 GetVelocity()
+    {
+        return this.GetComponent<Rigidbody2D>().velocity;
+    }
+
     bool CollidesWithGround(Transform Object)
     {
         Vector2 GroundCheck = new Vector2( Object.position.x, Object.position.y - 2.0f );
@@ -87,6 +92,6 @@ public class CharacterController2D : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Checkpoint"))
-            Checkpoint = transform.position + new Vector3(0f, 1.2f, 0f);
+            Checkpoint = transform.position;
     }
 }

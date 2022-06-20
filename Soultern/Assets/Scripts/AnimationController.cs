@@ -20,5 +20,6 @@ public class AnimationController : MonoBehaviour
     void Update()
     {
         ObjectAnimator.SetBool("IsWalking", CharacterController.IsWalking);
+        ObjectAnimator.SetFloat("VelocityY", CharacterController.GetVelocity().y);
     }
 }
