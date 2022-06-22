@@ -6,12 +6,13 @@
     }
   }
 
-  *{
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     background-color: rgba(225,225,225,0);
 }
+
 
 
 p{
@@ -37,6 +38,7 @@ p{
 
 .poster{
     vertical-align:-21rem;
+    border-radius: 8px;
 }
 
 
@@ -54,8 +56,8 @@ p{
 
 
 img{
-    margin-top: 10rem;
-    margin-bottom: 6rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     width: 200px;
     
 
@@ -64,7 +66,7 @@ h1{
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    margin-top: 3rem;
+    margin:0;
 }
 h2{
     text-align: center;
@@ -86,7 +88,7 @@ h4{
 }
 
 #photos{
-    border: 10px solid rgb(63, 131, 186);
+   
     border-radius: 30px;
     background-color:rgb(63, 131, 186) ;
     margin-bottom: 2rem;
@@ -98,190 +100,7 @@ h4{
     width: 100%;
     height: 4%;
     margin-top: 4rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
-    background-color:rgb(63, 131, 186) ;
-    border: 5px solid rgb(33, 97, 150);
-    border-radius: 30px;
-    align-items: baseline;
-}
-
-#text_about_our_game{
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    margin: 3rem;
-    color: white;   
-}
-
-#text_in_footer{
-    font-size: 15pt;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    
-}
-#footer_list{
-    list-style-type: none; 
-    display: inline-block;
-    
-}
-
-footer{
-    width: 100%;
-    margin:0;
-    padding: 0;
-}
-.emails{
-    font-size: 15pt;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    color:rgb(44, 98, 143);
-}
-
-.emails:hover{
-    color:rgb(98, 148, 190);
-    text-decoration: none;
-}
-
-
-
-
-@media (min-width:1200px) {
-    .container{
-        max-width:1200px;
-    }
-}
-@media (min-width:990px){
-    .col-md-4 {
-        max-width: 1999px ;
-    }
-}
-
-@media (min-width:990px){
-    .col-md-3 {
-        max-width: 1999px ;
-    }
-}
-/*----------------------------*/
-@import url(//fonts.googleapis.com/css?family=Montserrat:300,500);
-.team4 {
-  font-family: "Montserrat", sans-serif;
-	color: #8d97ad;
-  font-weight: 300;
-}
-
-.team4 h1, .team4 h2, .team4 h3, .team4 h4, .team4 h5, .team4 h6 {
-  color: #3e4555;
-}
-
-.team4 .font-weight-medium {
-	font-weight: 500;
-}
-
-.team4 h5 {
-    font-size: 18px;
-}
-
-.team4 .subtitle {
-    color: #8d97ad;
-		font-size: 13px;
-}
-
-
-
-
-/*-------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@500&family=Asap:wght@500&family=Bitter:ital,wght@0,300;0,400;0,600;0,900;1,300&family=Josefin+Sans:ital@1&family=Lato:wght@700;900&family=Roboto:ital,wght@0,300;0,900;1,400;1,900&family=Tiro+Kannada:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@500&family=Asap:wght@500&family=Bitter:ital,wght@0,300;0,400;0,600;0,900;1,300&family=Josefin+Sans:ital@1&family=Kanit:ital,wght@1,300&family=Lato:wght@700;900&family=Montserrat:wght@500&family=Roboto:ital,wght@0,300;0,900;1,400;1,900&family=Tiro+Kannada:ital@1&display=swap');
-@media screen and (prefers-reduced-motion: no-preference) {
-    html {
-      scroll-behavior: smooth;
-    }
-  }
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: rgba(225,225,225,0);
-}
-
-
-p{
-    font-size: 1.25rem;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-}
-
-.section-image {
-    display: inline-block;
-    width: 220px;
-    height: 150px;
-    background: #777;
-    background-position: center center;
-    background-size: cover;
-    box-shadow: 0 0 6px rgba(77,77,77,.5);
     margin-bottom: 2rem;
-}
-.img-inline {
-    width: 100%;
-    box-shadow: 0 0 6px rgba(77,77,77,.5);
-}
-
-.row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-    text-align:center;
-    align-items: baseline;
-}
-
-
-
-img{
-    margin-top: 5rem;
-    margin-bottom: 3rem;
-    width: 200px;
-
-}
-h1{
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    margin-top: 3rem;
-}
-h2{
-    text-align: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-family: 'Montserrat', sans-serif;
-}
-
-
-
-#headline{
-    margin-top: 15%;
-    margin-bottom: 5%;
-    font-size: 3rem;
-}
-
-
-#photos{
-    
-    border-radius: 30px;
-    background-color:rgb(63, 131, 186) ;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-}
-
-#container_about_our_game{
-
-    width: 100%;
-    height: 4%;
-    margin-top: 4rem;
     margin-left: 10%;
     margin-right: 10%;
     background-color:rgb(63, 131, 186) ;
@@ -311,9 +130,11 @@ h2{
 }
 
 footer{
+    position: absolute;
     width: 100%;
     margin:0;
     padding: 0;
+    
 }
 .emails{
     font-size: 15pt;
@@ -328,7 +149,46 @@ footer{
 }
 
 
-
+.divider {
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  
+.divider:before {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    border: 1px solid #f0f0f0;
+    left: 50%;
+    margin-left: -15px;
+    top: 50%;
+    background: #fff;
+    margin-top: -15px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+ .divider:after {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 1px solid #2ca5b9;
+    left: 50%;
+    margin-left: -10px;
+    top: 50%;
+    background: #2ca5b9;
+    margin-top: -10px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
 
 @media (min-width:1200px) {
     .container{
@@ -373,12 +233,15 @@ footer{
 
 
 
+
+
+
 /*------------------------------------*/
 
 #back-to-top {
     
     position:sticky;
-    bottom: 15px;
+    top: -50%;
     left:96%;
     right: 15px; 
     z-index: 996;
