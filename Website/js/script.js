@@ -1,32 +1,33 @@
-//Get the button
-var mybutton = document.getElementById("myBtn");
+const showOnPx = 100;
+const backToTopButton = document.querySelector(".back-to-top");
+const pageProgressBar = document.querySelector(".progress-bar");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+const scrollContainer = () => {
+  return document.documentElement || document.body;
+};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+const goToTop = () => {
+  document.body.scrollIntoView({
+    behavior: "smooth"
+  });
+};
+
+document.addEventListener("scroll", () => {
+  console.log("Scroll Height: ", scrollContainer().scrollHeight);
+  console.log("Client Height: ", scrollContainer().clientHeight);
+
+  const scrolledPercentage =
+    (scrollContainer().scrollTop /
+      (scrollContainer().scrollHeight - scrollContainer().clientHeight)) *
+    100;
+
+  pageProgressBar.style.width = `${scrolledPercentage}%`;
+
+  if (scrollContainer().scrollTop > showOnPx) {
+    backToTopButton.classList.remove("hidden");
   } else {
-    mybutton.style.display = "none";
+    backToTopButton.classList.add("hidden");
   }
-}
+});
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
-
-$(window).bind("resize", function () {
-  console.log($(this).width())
-  if ($(this).width() < 1206) {
-      $('div').removeClass('col-md-4').addClass('col-md-4-fixed')
-  } else {
-      $('div').removeClass('col-md-4-fixed').addClass('col-md-4')
-  }
-}).trigger('resize');
-
-
-
+backToTopButton.addEventListener("click", goToTop);
