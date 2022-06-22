@@ -4,22 +4,32 @@ using UnityEngine;
 
 public class AnimationController : MonoBehaviour
 {
-    private Animator ObjectAnimator;
+    private GameObject Player;
+    private GameObject Woodsman;
 
-    private string Player = "Player";
+    private Animator PlayerAnimator;
+    private Animator WoodsmanAnimator;
 
     private CharacterController2D CharacterController;
+    private WoodsmanController WoodsmanController;
 
     void Start()
     {
-        ObjectAnimator = GameObject.Find(Player).GetComponent<Animator>();
+        Player = GameObject.Find("Player");
+        Woodsman = GameObject.Find("Woodsman");
+
+        PlayerAnimator = Player.GetComponent<Animator>();
+        WoodsmanAnimator = Woodsman.GetComponent<Animator>();
         
-        CharacterController = GameObject.Find(Player).GetComponent<CharacterController2D>();
+        CharacterController = Player.GetComponent<CharacterController2D>();
+        WoodsmanController = Woodsman.GetComponent<WoodsmanController>();
     }
 
     void Update()
     {
-        ObjectAnimator.SetBool("IsWalking", CharacterController.IsWalking);
-        ObjectAnimator.SetFloat("VelocityY", CharacterController.GetVelocity().y);
+        PlayerAnimator.SetBool("IsWalking", CharacterController.IsWalking);
+        PlayerAnimator.SetFloat("VelocityY", CharacterController.GetVelocity().y);
+        
+        WoodsmanAnimator.SetBool("WillThrowAxe", WoodsmanController.WillThrowAxe);
     }
 }

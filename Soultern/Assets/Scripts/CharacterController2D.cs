@@ -23,6 +23,13 @@ public class CharacterController2D : MonoBehaviour
 
     [HideInInspector] public Vector3 Checkpoint;
 
+    private StatsController StatsController;
+
+    void Start()
+    {
+        StatsController = GameObject.Find("StatsController").GetComponent<StatsController>();
+    }
+
     void Update()
     {
         IsGrounded = CollidesWithGround(this.transform);
@@ -93,5 +100,19 @@ public class CharacterController2D : MonoBehaviour
     {
         if (other.CompareTag("Checkpoint"))
             Checkpoint = transform.position;
+        
+        if (other.CompareTag("Damage"))
+            StatsController.Health--;
+        if (other.CompareTag("Destroy"))
+        {
+            Destroy(other.transform.parent.gameObject);
+            this.GetComponent<Rigidbody2D>().AddForce(new Vector2(3f, 7.5f), ForceMode2D.Impulse);
+        }
+
+        if (other.CompareTag("Health") && StatsController.Health != StatsController.HealthMax)
+        {
+            StatsController.Health++;
+            Destroy(other.gameObject);
+        }
     }
 }

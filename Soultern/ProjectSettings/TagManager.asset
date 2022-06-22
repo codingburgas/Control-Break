@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Checkpoint
+  - Destroy
+  - Death
+  - Damage
+  - Health
   layers:
   - Default
   - TransparentFX
