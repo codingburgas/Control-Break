@@ -46,7 +46,7 @@ public class StatsController : MonoBehaviour
             }
         }
 
-        if (CanRegen && Mathf.Abs(CharacterController.GetMovement()) < 0.1f && CharacterController.IsGrounded)
+        if (CanRegen && CharacterController.IsGrounded)
             RegenStamina();
     }
 
@@ -64,7 +64,7 @@ public class StatsController : MonoBehaviour
 
     void DrainStamina()
     {
-        ExtraFunctions.Wait(StaminaMax / 360 / 6);
+        StartCoroutine(ExtraFunctions.Wait(StaminaMax / 360 / 6));
         Stamina--;
     }
 
@@ -75,7 +75,7 @@ public class StatsController : MonoBehaviour
 
     void RegenStamina()
     {
-        ExtraFunctions.Wait(StaminaMax / 360 / 10);
+        StartCoroutine(ExtraFunctions.Wait(StaminaMax / 360 / 10));
         Stamina++;
     }
 }

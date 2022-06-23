@@ -15,11 +15,14 @@ public class CharacterController2D : MonoBehaviour
     [HideInInspector] public bool IsWalking;
     [HideInInspector] public bool IsFlipped;
     [HideInInspector] public bool CanUse;
+    private bool TakeDamage = false;
 
     private float MovementSpeed;
     private float WalkSpeed = 2.8f;
     private float SprintSpeed = 6.0f;
-    private float JumpForce = 5.0f;
+    private float JumpForce = 6.0f;
+
+    [HideInInspector] public Vector2 Movement;
 
     [HideInInspector] public Vector3 Checkpoint;
 
@@ -35,7 +38,7 @@ public class CharacterController2D : MonoBehaviour
         IsGrounded = CollidesWithGround(this.transform);
         IsWalking = GetMovement() != Mathf.Floor(0);
 
-        Vector2 Movement = new Vector2(GetMovement(), 0f);
+        Movement = new Vector2(GetMovement(), 0f);
 
         transform.position += (Vector3)Movement * Time.deltaTime * MovementSpeed;
 
@@ -65,7 +68,7 @@ public class CharacterController2D : MonoBehaviour
 
     void Jump()
     {
-        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
+        Launch(0f, JumpForce);
     }
 
     public void Flip()
@@ -96,17 +99,30 @@ public class CharacterController2D : MonoBehaviour
         return Physics2D.OverlapCircle(GroundCheck, 0.2f, GroundLayer);
     }
 
+    void Launch(float ForceX, float ForceY)
+    {
+        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(ForceX, ForceY), ForceMode2D.Impulse);
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (TakeDamage) return;
         if (other.CompareTag("Checkpoint"))
-            Checkpoint = transform.position;
+            Checkpoint = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
         
-        if (other.CompareTag("Damage"))
+        if (other.CompareTag("Damage") && !TakeDamage)
+        {
             StatsController.Health--;
-        if (other.CompareTag("Destroy"))
+            if (transform.position.x > other.transform.position.x)
+                Launch(5f, 2f);
+            else
+                Launch(-5f, 2f);
+            TakeDamage = true;
+        }
+        if (other.CompareTag("Destroy") && !TakeDamage)
         {
             Destroy(other.transform.parent.gameObject);
-            this.GetComponent<Rigidbody2D>().AddForce(new Vector2(3f, 7.5f), ForceMode2D.Impulse);
+            Launch(3f, 7.5f);
         }
 
         if (other.CompareTag("Health") && StatsController.Health != StatsController.HealthMax)
@@ -114,5 +130,13 @@ public class CharacterController2D : MonoBehaviour
             StatsController.Health++;
             Destroy(other.gameObject);
         }
+
+        StartCoroutine(EnableDamage());
+    }
+
+    IEnumerator EnableDamage()
+    {
+        yield return new WaitForSeconds(1);
+        TakeDamage = false;
     }
 }

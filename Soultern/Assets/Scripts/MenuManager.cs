@@ -11,8 +11,8 @@ public class MenuManager : MonoBehaviour
     private GameObject PauseMenu;
     private GameObject StaminaBar;
 
-    private bool IsGameOver;
-    private bool IsPaused;
+    [HideInInspector] public bool IsGameOver;
+    [HideInInspector] public bool IsPaused;
 
     void Start()
     {

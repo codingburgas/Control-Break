@@ -5,6 +5,7 @@ using UnityEngine;
 public class DeathManager : MonoBehaviour
 {
     private StatsController StatsController;
+    private CharacterController2D CharacterController;
 
     private Transform Player;
 
@@ -15,6 +16,7 @@ public class DeathManager : MonoBehaviour
     void Start()
     {
         StatsController = GameObject.Find("StatsController").GetComponent<StatsController>();
+        CharacterController = GameObject.Find("Player").GetComponent<CharacterController2D>();
 
         Player = GameObject.Find("Player").transform;
     }
@@ -32,7 +34,9 @@ public class DeathManager : MonoBehaviour
     {
         StatsController.Health = StatsController.HealthMax;
         StatsController.Stamina = StatsController.StaminaMax;
-        
+
+        GameObject.Find("Player").GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+
         IsDead = false;
     }
 }
