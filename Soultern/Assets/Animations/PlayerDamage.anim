@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WoodsmanIdle
+  m_Name: PlayerDamage
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -2109869362, guid: 8d8553e8cb158b34599b0129ceed6109, type: 3}
+      value: {fileID: -1949273598, guid: c8a0e915f6e37c343845134b4eaf2e5c, type: 3}
     - time: 0.083333336
-      value: {fileID: -1760071197, guid: 8d8553e8cb158b34599b0129ceed6109, type: 3}
+      value: {fileID: -17788708, guid: c8a0e915f6e37c343845134b4eaf2e5c, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -42,8 +42,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -2109869362, guid: 8d8553e8cb158b34599b0129ceed6109, type: 3}
-    - {fileID: -1760071197, guid: 8d8553e8cb158b34599b0129ceed6109, type: 3}
+    - {fileID: -1949273598, guid: c8a0e915f6e37c343845134b4eaf2e5c, type: 3}
+    - {fileID: -17788708, guid: c8a0e915f6e37c343845134b4eaf2e5c, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

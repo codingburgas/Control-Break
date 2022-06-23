@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8d8553e8cb158b34599b0129ceed6109
+guid: 8bfb0b1b612327f48a14593fd367506a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,12 +116,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: woodsman_0
+      name: mqtna_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 65
+        width: 100
         height: 155
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -130,19 +130,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aebf1154dd7b8434181d2046449fa99e
-      internalID: -2109869362
+      spriteID: 7f1ecd7df44be7d448b3e43fe255aa3d
+      internalID: 1330402078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: woodsman_1
+      name: mqtna_1
       rect:
         serializedVersion: 2
-        x: 65
+        x: 100
         y: 0
-        width: 65
+        width: 100
         height: 155
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -151,8 +151,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 827606dbab2ac694981a9b7e4c4487d5
-      internalID: -1760071197
+      spriteID: a4cc6fa6f449295469359ceeaf82a2de
+      internalID: -1598997431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mqtna_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 785a9d33080b74047bef0e80dd6aac5b
+      internalID: -658467883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mqtna_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de37b22f677b0a4180c7f3faaa0718f
+      internalID: -1349140453
       vertices: []
       indices: 
       edges: []
@@ -168,8 +210,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      woodsman_0: -2109869362
-      woodsman_1: -1760071197
+      mqtna_3: -1349140453
+      mqtna_0: 1330402078
+      mqtna_1: -1598997431
+      mqtna_2: -658467883
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

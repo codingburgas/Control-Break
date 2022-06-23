@@ -12,6 +12,7 @@ public class AnimationController : MonoBehaviour
 
     private CharacterController2D CharacterController;
     private WoodsmanController WoodsmanController;
+    private StatsController StatsController;
 
     void Start()
     {
@@ -23,13 +24,16 @@ public class AnimationController : MonoBehaviour
         
         CharacterController = Player.GetComponent<CharacterController2D>();
         WoodsmanController = Woodsman.GetComponent<WoodsmanController>();
+        StatsController = GameObject.Find("StatsController").GetComponent<StatsController>();
     }
 
     void Update()
     {
         PlayerAnimator.SetBool("IsWalking", CharacterController.IsWalking);
         PlayerAnimator.SetFloat("VelocityY", CharacterController.GetVelocity().y);
+        PlayerAnimator.SetBool("TakenDamage", CharacterController.TakeDamage);
+        PlayerAnimator.SetInteger("Health", StatsController.Health);
         
-        WoodsmanAnimator.SetBool("WillThrowAxe", WoodsmanController.WillThrowAxe);
+        WoodsmanAnimator.SetBool("WillThrow", WoodsmanController.WillThrowAxe);
     }
 }

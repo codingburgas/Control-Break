@@ -10,17 +10,25 @@ public class CheckpointManager : MonoBehaviour
     private CameraController2D CameraController;
     private DeathManager DeathManager;
 
-    private Vector3 LatestCheckpoint;
+    public Vector3 LatestCheckpoint;
+
+    void Awake()
+    {
+        if (FindObjectsOfType(GetType()).Length > 1)
+            Destroy(gameObject);
+
+        DontDestroyOnLoad(this);
+    }
 
     void Start()
     {
         Player = GameObject.Find("Player").transform;
 
+        LatestCheckpoint = Player.position;
+
         CharacterController = Player.GetComponent<CharacterController2D>();
         CameraController = GameObject.Find("CameraController2D").GetComponent<CameraController2D>();
         DeathManager = GameObject.Find("DeathManager").GetComponent<DeathManager>();
-
-        LatestCheckpoint = Player.position;
     }
 
     void Update()
@@ -34,7 +42,12 @@ public class CheckpointManager : MonoBehaviour
 
         if (CharacterController.IsFlipped)
             CharacterController.Flip();
-        
+
+        CharacterController.TakeDamage = false;
+    }
+
+    public void TeleportToCheckpoint()
+    {
         Player.position = LatestCheckpoint;
     }
 }

@@ -15,7 +15,8 @@ public class CharacterController2D : MonoBehaviour
     [HideInInspector] public bool IsWalking;
     [HideInInspector] public bool IsFlipped;
     [HideInInspector] public bool CanUse;
-    private bool TakeDamage = false;
+    [HideInInspector] public bool CanJump;
+    [HideInInspector] public bool TakeDamage = false;
 
     private float MovementSpeed;
     private float WalkSpeed = 2.8f;
@@ -35,6 +36,8 @@ public class CharacterController2D : MonoBehaviour
 
     void Update()
     {
+        // if (StatsController.Health == 0) return;
+
         IsGrounded = CollidesWithGround(this.transform);
         IsWalking = GetMovement() != Mathf.Floor(0);
 
@@ -108,7 +111,10 @@ public class CharacterController2D : MonoBehaviour
     {
         if (TakeDamage) return;
         if (other.CompareTag("Checkpoint"))
-            Checkpoint = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
+        {
+            Vector3 CheckpointPosition = other.transform.position;
+            Checkpoint = new Vector3(CheckpointPosition.x, CheckpointPosition.y - 1.5f, CheckpointPosition.z);
+        }
         
         if (other.CompareTag("Damage") && !TakeDamage)
         {
@@ -136,7 +142,7 @@ public class CharacterController2D : MonoBehaviour
 
     IEnumerator EnableDamage()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSecondsRealtime(1);
         TakeDamage = false;
     }
 }

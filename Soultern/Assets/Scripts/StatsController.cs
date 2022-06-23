@@ -11,8 +11,7 @@ public class StatsController : MonoBehaviour
 
     [HideInInspector] public int Health;
     [HideInInspector] public int HealthMax = 3;
-    // [HideInInspector]
-    public int Stamina = 0;
+    [HideInInspector] public int Stamina = 0;
     [HideInInspector] public int StaminaMax = 360;
 
     private int JumpDrain = 90;
@@ -36,35 +35,34 @@ public class StatsController : MonoBehaviour
             CanRegen = false;
 
         CharacterController.CanUse = Stamina > 0;
+        CharacterController.CanJump = Stamina > 90;
 
         if (Input.GetKey(CharacterController.SprintKey))
         {
             if (CharacterController.CanUse)
-            {
-                CanRegen = false;
-                DrainStamina();
-            }
+                StartCoroutine(DrainStamina());
+            CanRegen = false;
         }
 
         if (CanRegen && CharacterController.IsGrounded)
-            RegenStamina();
+            StartCoroutine(RegenStamina());
     }
-
+    
     void Update()
     {
-        if (Input.GetKeyDown(CharacterController.JumpKey))
+        if (Input.GetKeyDown(CharacterController.JumpKey) && CharacterController.CanJump)
         {
-            if (CharacterController.IsGrounded && CharacterController.CanUse)
+            if (CharacterController.IsGrounded)
             {
-                CanRegen = false;
                 DrainJumpStamina();
             }
+            CanRegen = false;
         }
     }
 
-    void DrainStamina()
+    IEnumerator DrainStamina()
     {
-        StartCoroutine(ExtraFunctions.Wait(StaminaMax / 360 / 6));
+        yield return new WaitForSecondsRealtime(StaminaMax / 360 / 6);
         Stamina--;
     }
 
@@ -73,9 +71,9 @@ public class StatsController : MonoBehaviour
         Stamina -= JumpDrain;
     }
 
-    void RegenStamina()
+    IEnumerator RegenStamina()
     {
-        StartCoroutine(ExtraFunctions.Wait(StaminaMax / 360 / 10));
+        yield return new WaitForSecondsRealtime(StaminaMax / 360 / 10);
         Stamina++;
     }
 }

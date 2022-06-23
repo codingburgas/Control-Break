@@ -14,9 +14,4 @@ public class ExtraFunctions : MonoBehaviour
 
         return null;
     }
-
-    public IEnumerator Wait(float time)
-    {
-        yield return new WaitForSeconds(time);
-    }
 }

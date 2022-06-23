@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8d8553e8cb158b34599b0129ceed6109
+guid: e872d6a2e3f0d8542b377b6d57619d7a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -114,49 +114,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: woodsman_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 65
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aebf1154dd7b8434181d2046449fa99e
-      internalID: -2109869362
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: woodsman_1
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 0
-        width: 65
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 827606dbab2ac694981a9b7e4c4487d5
-      internalID: -1760071197
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -167,9 +125,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      woodsman_0: -2109869362
-      woodsman_1: -1760071197
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

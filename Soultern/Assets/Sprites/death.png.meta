@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8d8553e8cb158b34599b0129ceed6109
+guid: 85c86acde28f0024c8edbf2e4f836908
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: woodsman_0
+      name: death_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 65
-        height: 155
+        width: 130
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aebf1154dd7b8434181d2046449fa99e
-      internalID: -2109869362
+      spriteID: a679c96d46302cb4e81ddd5386251f96
+      internalID: -547348568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: woodsman_1
+      name: death_1
       rect:
         serializedVersion: 2
-        x: 65
+        x: 130
         y: 0
-        width: 65
-        height: 155
+        width: 130
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,8 +151,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 827606dbab2ac694981a9b7e4c4487d5
-      internalID: -1760071197
+      spriteID: baad5beb04ef71f43ad3029af9883137
+      internalID: 1580563999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_2
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 130
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a13db1d4e623934a9e622bb6ecde160
+      internalID: 1454042757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_3
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 130
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f8c6b2a3057a742a3da40a700307cb
+      internalID: 1178153932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_4
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 130
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52e95db7d67b0c4a828c9ac022ddd25
+      internalID: 849835724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_5
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 130
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c023e1e13b90dac44b6a10d0f18516d5
+      internalID: 1225171444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_6
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 130
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a144b0cac853a2c4f9ea18290ce067f2
+      internalID: 174700869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_7
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 0
+        width: 130
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae89e3e6d3c09eb43836582d61d8c90b
+      internalID: -810330874
       vertices: []
       indices: 
       edges: []
@@ -168,8 +294,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      woodsman_0: -2109869362
-      woodsman_1: -1760071197
+      death_6: 174700869
+      death_5: 1225171444
+      death_3: 1178153932
+      death_1: 1580563999
+      death_4: 849835724
+      death_0: -547348568
+      death_2: 1454042757
+      death_7: -810330874
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

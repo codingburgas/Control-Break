@@ -17,15 +17,15 @@ public class HeartGenerator : MonoBehaviour
         HeartSpeed = Random.Range(0.125f, 0.326f);
         HeartRange = Random.Range(1.75f, 2.6f);
 
-        HeartMinDelay = Random.Range(20, 31);
-        HeartMaxDelay = Random.Range(30, 61);
+        HeartMinDelay = Random.Range(40, 61);
+        HeartMaxDelay = Random.Range(60, 121);
 
         StartCoroutine(GenerateHeart());
     }
 
     IEnumerator GenerateHeart()
     {
-        yield return new WaitForSeconds(Random.Range(HeartMinDelay, HeartMaxDelay));
+        yield return new WaitForSecondsRealtime(Random.Range(HeartMinDelay, HeartMaxDelay));
         Instantiate(HeartPrefab, transform.position, Quaternion.identity);
         StartCoroutine(GenerateHeart());
     }
