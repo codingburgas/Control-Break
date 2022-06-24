@@ -28,15 +28,21 @@ public class CharacterController2D : MonoBehaviour
     [HideInInspector] public Vector3 Checkpoint;
 
     private StatsController StatsController;
+    private CheckpointManager CheckpointManager;
 
     void Start()
     {
         StatsController = GameObject.Find("StatsController").GetComponent<StatsController>();
+        CheckpointManager = GameObject.Find("CheckpointManager").GetComponent<CheckpointManager>();
+
+        Time.timeScale = 1f;
+        transform.position = CheckpointManager.LatestCheckpoint;
+        Camera.main.transform.position = new Vector3(CheckpointManager.LatestCheckpoint.x, CheckpointManager.LatestCheckpoint.y + 2.25f, Camera.main.transform.position.z);
     }
 
     void Update()
     {
-        // if (StatsController.Health == 0) return;
+        if (StatsController.Health == 0 || Time.timeScale == 0f) return;
 
         IsGrounded = CollidesWithGround(this.transform);
         IsWalking = GetMovement() != Mathf.Floor(0);
@@ -113,7 +119,7 @@ public class CharacterController2D : MonoBehaviour
         if (other.CompareTag("Checkpoint"))
         {
             Vector3 CheckpointPosition = other.transform.position;
-            Checkpoint = new Vector3(CheckpointPosition.x, CheckpointPosition.y - 1.5f, CheckpointPosition.z);
+            CheckpointManager.LatestCheckpoint = new Vector3(CheckpointPosition.x, CheckpointPosition.y - 1.5f, CheckpointPosition.z);
         }
         
         if (other.CompareTag("Damage") && !TakeDamage)

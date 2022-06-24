@@ -7,6 +7,7 @@ public class DeathManager : MonoBehaviour
 {
     private StatsController StatsController;
     private CharacterController2D CharacterController;
+    private MenuManager MenuManager;
     private ExtraFunctions ExtraFunctions;
 
     private Transform Player;
@@ -19,6 +20,7 @@ public class DeathManager : MonoBehaviour
     {
         StatsController = GameObject.Find("StatsController").GetComponent<StatsController>();
         CharacterController = GameObject.Find("Player").GetComponent<CharacterController2D>();
+        MenuManager = GameObject.Find("MenuManager").GetComponent<MenuManager>();
         ExtraFunctions = GameObject.Find("ExtraFunctions").GetComponent<ExtraFunctions>();
 
         Player = GameObject.Find("Player").transform;
@@ -30,20 +32,11 @@ public class DeathManager : MonoBehaviour
             StatsController.Health = 0;
 
         if (StatsController.Health == 0)
-        {
             IsDead = true;
-        }
     }
 
     public void Revive()
     {
-        StatsController.Health = StatsController.HealthMax;
-        StatsController.Stamina = StatsController.StaminaMax;
-
-        GameObject.Find("Player").GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
-        IsDead = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

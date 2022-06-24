@@ -29,6 +29,8 @@ public class StatsController : MonoBehaviour
     
     void FixedUpdate()
     {
+        if (Health == 0 || Time.timeScale == 0f) return;
+
         if (Stamina < StaminaMax)
             CanRegen = true;
         else
@@ -50,6 +52,8 @@ public class StatsController : MonoBehaviour
     
     void Update()
     {
+        if (Health == 0 || Time.timeScale == 0f) return;
+
         if (Input.GetKeyDown(CharacterController.JumpKey) && CharacterController.CanJump)
         {
             if (CharacterController.IsGrounded)
