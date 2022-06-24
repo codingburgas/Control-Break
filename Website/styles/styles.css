@@ -151,46 +151,130 @@ footer{
     margin-bottom: 0;
 }
 
-/*
-.divider {
+/*------------------------------------------------*/
+:root {
+    --font: "Comfortaa", cursive;
+    
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+  }
+  
+  
+  
+
+/* The main home page styling */
+.main-homepage {
+    height: calc(100% - 3.34em - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    border-bottom: 1px solid #f0f0f0;
-    margin-bottom: 30px;
-    margin-top: 30px;
   }
   
-.divider:before {
-    position: absolute;
-    content: '';
-    width: 30px;
-    height: 30px;
-    border: 1px solid #f0f0f0;
-    left: 50%;
-    margin-left: -15px;
-    top: 50%;
-    background: #fff;
-    margin-top: -15px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+  .main-bg {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3a3d3c95;
+    text-align: center;
+    transition: 100ms linear;
+    border-radius: 45px;
+    margin: auto 25px;
+    padding: auto 25px;
+    background-image:url('gif_video.gif'); 
+    background-repeat:no-repeat;
+    background-size: cover;
+    filter: brightness(100%);  
   }
   
- .divider:after {
-    position: absolute;
-    content: '';
-    width: 20px;
-    height: 20px;
-    border: 1px solid #2ca5b9;
-    left: 50%;
-    margin-left: -10px;
-    top: 50%;
-    background: #2ca5b9;
-    margin-top: -10px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+  /* The h1 titile */
+  .homepage-h1 {
+    color: white;
+    margin: auto 20px;
+    font-weight: 900;
+    filter: brightness(100%);
+  }
+  
+  
+  
+  /* Desktop style */
+  @media only screen and (min-width: 45em) {
+    /* Changing the main */
+    .main-bg {
+      height: 536px;
+      width: 1230px;
+    }
+  }
+  
+  .hero--wrapper { 
+    margin: 0 auto;
+    width: 800px;
+    color: white;
+  }
+  
+  h1 {
+    font-weight: 100;
+    font-size: 48px;
+    text-align: center;
+    margin: 25px 0 0 0;
+    color:white;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  #hero--buttons {
+    margin: 0px auto; 
+    text-align: center;
+  }
+  
+  #finance-btn {
+    width: 250px;
+    height: 50px;
+    background: #333;
+    border: 0;
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    border-radius: 8px;
+  
+  }
+  
+  #refer-btn {
+    width: 250px;
+    height: 50px;
+    background: #333;
+    border: 0;
+    display: inline-block;
+    color: #fff;
+    border-radius: 8px;
+  }
+  
+  #gform_7, #gform_63 {
+    display: none;
+  }
+  
+  #gform_7 {
+    margin: 0 auto;
+    width: 300px;
+    padding: 10px;
+  }
+  
+  #gform_63 {
+    margin: 0 auto;
+    width: 300px;
+    padding: 10px;
+  }
+  
+  .i {
+    margin: 20px auto;
   }
 
 
