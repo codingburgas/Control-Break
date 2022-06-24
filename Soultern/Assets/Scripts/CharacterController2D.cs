@@ -42,7 +42,7 @@ public class CharacterController2D : MonoBehaviour
 
     void Update()
     {
-            // if (StatsController.Health == 0 || Time.timeScale == 0f) return;
+        if (StatsController.Health == 0 || Time.timeScale == 0f) return;
 
         IsGrounded = CollidesWithGround(this.transform);
         IsWalking = GetMovement() != Mathf.Floor(0);
@@ -152,6 +152,7 @@ public class CharacterController2D : MonoBehaviour
         {
             GameObject Pumpkin = other.transform.parent.gameObject;
 
+            Pumpkin.GetComponent<PumpkinController>().PumpkinDeath.Play();
             Pumpkin.GetComponent<PumpkinController>().IsDead = true;
             StartCoroutine(DestroyObject(Pumpkin));
             Launch(3f, 10f);
@@ -162,6 +163,11 @@ public class CharacterController2D : MonoBehaviour
             StatsController.Health++;
 
             Destroy(other.gameObject);
+        }
+
+        if (other.CompareTag("Spikes") && !TakeDamage)
+        {
+            StatsController.Health = 0;
         }
 
         Invoke("EnableDamage", 0.825f);

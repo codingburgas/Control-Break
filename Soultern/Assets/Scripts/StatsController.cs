@@ -57,9 +57,7 @@ public class StatsController : MonoBehaviour
         if (Input.GetKeyDown(CharacterController.JumpKey) && CharacterController.CanJump)
         {
             if (CharacterController.IsGrounded)
-            {
                 DrainJumpStamina();
-            }
             CanRegen = false;
         }
     }

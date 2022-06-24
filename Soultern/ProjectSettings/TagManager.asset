@@ -9,6 +9,7 @@ TagManager:
   - Death
   - Damage
   - Health
+  - Spikes
   layers:
   - Default
   - TransparentFX

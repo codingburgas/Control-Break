@@ -31,7 +31,7 @@ public class DeathManager : MonoBehaviour
         LivesText = ExtraFunctions.FindInactive("Lives");
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (Player.position.y <= DeathLevel)
         {
