@@ -11,6 +11,8 @@ public class CharacterController2D : MonoBehaviour
 
     public LayerMask GroundLayer;
 
+    private AudioSource Footstep;
+
     [HideInInspector] public bool IsGrounded;
     [HideInInspector] public bool IsWalking;
     [HideInInspector] public bool IsFlipped;
@@ -34,6 +36,8 @@ public class CharacterController2D : MonoBehaviour
     {
         StatsController = GameObject.Find("StatsController").GetComponent<StatsController>();
         CheckpointManager = GameObject.Find("CheckpointManager").GetComponent<CheckpointManager>();
+
+        Footstep = GetComponent<AudioSource>();
 
         Time.timeScale = 1f;
         transform.position = CheckpointManager.LatestCheckpoint;
@@ -63,16 +67,26 @@ public class CharacterController2D : MonoBehaviour
             Flip();
         if (Input.GetKeyDown(RightKey) && IsFlipped)
             Flip();
+
+        
+        if (GetMovement() != 0 && !Footstep.isPlaying && IsGrounded)
+            Footstep.Play();
+        else if (GetMovement() == 0)
+            Footstep.Stop();
     }
 
     void Walk()
     {
         MovementSpeed = WalkSpeed;
+        
+        Footstep.pitch = 0.9f;
     }
 
     void Sprint()
     {
         MovementSpeed = SprintSpeed;
+
+        Footstep.pitch = 1.125f;
     }
 
     void Jump()
