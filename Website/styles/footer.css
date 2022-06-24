@@ -1,0 +1,36 @@
+#text_in_footer{
+    font-size: 15pt;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    
+}
+#footer_list{
+    list-style-type: none; 
+    display: inline-block;
+    
+}
+
+footer{
+
+    width: 100%;
+    margin:0;
+    padding: 0;
+    
+}
+.emails{
+    font-size: 15pt;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color:rgb(44, 98, 143);
+}
+
+.emails:hover{
+    color:rgb(98, 148, 190);
+    text-decoration: none;
+}
+
+
+#section2{
+    margin-top:0 ;
+    margin-bottom: 0;
+}

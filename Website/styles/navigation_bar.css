@@ -1,0 +1,46 @@
+.navbar .nav-item:not(:last-child) {
+    padding-right: 35px;
+  }
+  
+  .dropdown-toggle::after {
+    transition: transform 0.15s linear;
+  }
+  
+  .show.dropdown .dropdown-toggle::after {
+    transform: translateY(3px);
+  }
+  
+  .dropdown-menu {
+    margin-top: 0;
+  }
+  .navbar-light {
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 1px 1px 2px rgba(0,0,0,.25);
+  }
+  
+  .navbar-brand {
+    text-align: center;
+    font-size: 1.6rem;
+    display: inline-flex;
+    align-items: flex-end;
+  }
+  .navbar-brand img {
+    margin-right: .5rem;
+  }
+  
+  @media (min-width: 1060px ) {
+    .navbar-expand-md > .container, .navbar-expand-md > .container-fluid, .navbar-expand-md > .container-lg, .navbar-expand-md > .container-md, .navbar-expand-md > .container-sm, .navbar-expand-md > .container-xl {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+  }
+  
+  .featurette-divider {
+    margin: 3rem 0;
+  }
+  
+  #game_name{
+    margin:0;
+  }
+  

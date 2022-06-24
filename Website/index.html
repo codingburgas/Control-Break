@@ -6,11 +6,43 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="styles/bootstrap.min.css" rel="stylesheet"/>
         <link href="styles/styles.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/footer.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/back_to_top_button.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/navigation_bar.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/first_page_style.css" rel="stylesheet" type="text/css"/>
         
 </head>
         
 <body>
-  <main class="main-homepage">
+  <navbar class="navbar navbar-expand-md fixed-top navbar-light font-weight-bold">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#home_page">
+           <img id="game_name" src="images/logo/game_name.png">
+            
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#About_us">About us</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#plot">Plot</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</navbar>
+    
+
+    
+ <!--------------------------------------------> 
+  <main id="home_page" class="main-homepage">
     <div class="tilt-conainer">
       <div class="main-bg">
         
@@ -22,7 +54,7 @@
                     <a href="https://unsplash.com/photos/1PtvoXbO6-c/download?force=trues" download="GFG">
                      <button id="finance-btn" type="submit">Download</button>
                      </a>
-                     <button id="refer-btn">Explore </button>
+                     <a href="#Explore"><button id="refer-btn">Explore</button></a>
                    </div>
             </div>
           </div>
@@ -30,58 +62,59 @@
         </div>
       </div>
     </div>
-  </main>
+  </main >
 
 <!--------------------------------------------------------------------------------->
 
 
   <div class="section" id="four" style="width:100%">
-    <object data="images/branches4.svg" width="100%" height="1%"> </object>
-    
-    </svg>
+    <object id="plot" data="images/seperators_and_others/branches4.svg" width="100%" height="1%"> </object>
   </div>
-  <section id="features" class="features">
+
+<!---------------------------------------------------------------------------------------------->
+  <section id="features"   class="features">
     <div class="container  text-center">
         <div class="container">
             <div class="row featurette">
               
                 <div class="col-md-4">
                  
-                <img class="img-inline poster" src="images/Poster.jpg" alt="poster" width="300px">
+                <img class="img-inline poster" src="images/levels_posters/Poster.jpg" alt="poster" width="300px">
                 
               </div>
                     
                   <div class="col-md-8 plot_text text-xs-center">
-                      <div id="plot_headline" class="col-md-12"><h2>The plot of the game</h2></div>
+                      <div id="plot_headline" class="col-md-12"><h2 >The plot of the game</h2></div>
                     <div class="text-xs-center"><p >The events in the game take place in the Magic Forest of Soultern.The mission of our main character Ganyo is to beat the big boss at the end of the game and to return to the real world.The game has four levels with different specifics and on each level there is one boss, which the player must kill so that he/she can continue playing.</p></div>
                   </div>
             </div>
         </div>    
     </div>
+
+<!------------------------------------------------------------------------------->
 <div class="section" id="four" style="width:100%">
-  <object data="images/branches4.svg" width="100%" height="1%"> </object>
-  
+  <object id="Explore" data="images/seperators_and_others/branches4.svg" width="100%" height="1%"> </object>
 </div>
   
 <!------------------------------------------------------------------------------------->   
 
     <div class="container mt-4 text-center " id="section2" >
-        <h1>Explore some of the Soultern's levels</h1>
+        <h1 >Explore some of the Soultern's levels</h1>
           <div class="row no-gutters"  >
               
               <div class="col-md-4">
-                <img class="section-image" src="images/summer.png" alt="poster">
+                <img class="section-image" src="images/levels_posters/summer.png" alt="poster">
                 <h2>Summer:</h2>
                 <p class="center-block inner">You continue your journey and after hearing strange noises you make your first friend in the game.</p>
               </div>
     
               <div class="col-md-4">
-                <img class="section-image" src="images/fall.png" alt="poster">
+                <img class="section-image" src="images/levels_posters/fall.png" alt="poster">
                 <h2>Fall:</h2>
                 <p class="center-block ">While travelling on a steamship, the Beast takes over the level's boss and kidnaps your friend.</p>
               </div>
               <div class="col-md-4">
-                <img class="section-image" src="images/winter.png" alt="poster" >
+                <img class="section-image" src="images/levels_posters/winter.png" alt="poster" >
                 <h2>Winter:</h2>
                 <p class="center-block inner">As the winter is the last season of the year this is our game last level. During this level you have to fight with your last enemy so your character can go home.</p>
               </div>
@@ -91,7 +124,7 @@
 
 <!------------------------------------------------------------------------------------------------------>       
 <div class="section" id="four" style="width:100%">
-  <object data="images/branches4.svg" width="100%" height="10%"> </object>
+  <object id="About_us"data="images/seperators_and_others/branches4.svg" width="100%" height="10%"> </object>
   
 </div>  
 
@@ -238,14 +271,13 @@
     </div>
 
 <!--------------------------------------------------------------------------------------->
-   <!-- Footer -->
+
 
  <div class="section featurette-divider" id="four" >
-  <object data="images/branches4.svg" width="100%" height="10%"> </object>
-  
+  <object data="images/seperators_and_others/branches4.svg" width="100%" height="10%"> </object>
 </div>
-
-
+<!---------------------------------------------------------------------------------->
+   <!-- Footer -->
  <footer class="page-footer font-small stylish-color-dark pt-4">
 
      <!-- Footer Links -->
@@ -327,44 +359,23 @@
 
 
    
- <button onclick="topFunction()" id="back-to-top" class="back-to-top d-flex align-items-center justify-content-center" style="width: 3rem; height: 3rem;"><i class="bi bi-arrow-up-short"><img src="images/up-arrow.png" style="width: 15px; height: 15px; " id="pointer"></i></button>
+ <button onclick="topFunction()" id="back-to-top" class="back-to-top d-flex align-items-center justify-content-center" style="width: 3rem; height: 3rem;"><i class="bi bi-arrow-up-short"><img src="images/seperators_and_others/up-arrow.png" style="width: 15px; height: 15px; " id="pointer"></i></button>
    
 
+ 
 
+  
 
-  <script>
-    //Get the button
-    var mybutton = document.getElementById("back-to-top");
-    
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
-    
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
-    }
-    
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-
-    </script>
-    <script src="js/aos.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/glightbox.min.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/scripts.js"></script>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    
+
     <script>hljs.initHighlightingOnLoad();</script>
     
 </body>
