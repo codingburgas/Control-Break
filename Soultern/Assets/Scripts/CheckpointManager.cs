@@ -10,7 +10,10 @@ public class CheckpointManager : MonoBehaviour
     private CameraController2D CameraController;
     private DeathManager DeathManager;
 
-    public Vector3 LatestCheckpoint;
+    [HideInInspector] public Vector3 StartingCheckpoint;
+    [HideInInspector] public Vector3 LatestCheckpoint;
+
+    [HideInInspector] public int Lives = 3;
 
     void Awake()
     {
@@ -18,12 +21,14 @@ public class CheckpointManager : MonoBehaviour
             Destroy(gameObject);
         
         DontDestroyOnLoad(gameObject);
+
+        Player = GameObject.Find("Player").transform;
+        
+        StartingCheckpoint = Player.transform.position; //new Vector3(-193.27f, 0f, 0f)
     }
 
     void Start()
     {
-        Player = GameObject.Find("Player").transform;
-
         LatestCheckpoint = Player.position;
 
         CharacterController = Player.GetComponent<CharacterController2D>();
