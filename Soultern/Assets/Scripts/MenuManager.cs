@@ -17,6 +17,8 @@ public class MenuManager : MonoBehaviour
     [HideInInspector] public bool IsGameOver;
     [HideInInspector] public bool IsPaused;
 
+    [HideInInspector] public float AnimationTime;
+
     void Start()
     {
         DeathManager = GameObject.Find("DeathManager").GetComponent<DeathManager>();
@@ -31,13 +33,15 @@ public class MenuManager : MonoBehaviour
         YouDied = false;
         IsGameOver = false;
         IsPaused = false;
+
+        AnimationTime = 2.0f;
     }
 
     void Update()
     {
         if (DeathManager.IsDead && !YouDied && CheckpointManager.Lives > 0)
             DisplayYouDiedMenu();
-        
+
         if (DeathManager.IsDead && !IsGameOver && CheckpointManager.Lives == 0)
             DisplayGameOverMenu();
 

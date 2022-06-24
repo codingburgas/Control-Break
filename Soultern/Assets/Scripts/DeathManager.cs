@@ -8,6 +8,7 @@ public class DeathManager : MonoBehaviour
 {
     private StatsController StatsController;
     private CheckpointManager CheckpointManager;
+    private MenuManager MenuManager;
     private ExtraFunctions ExtraFunctions;
 
     private Transform Player;
@@ -22,6 +23,7 @@ public class DeathManager : MonoBehaviour
     {
         StatsController = GameObject.Find("StatsController").GetComponent<StatsController>();
         CheckpointManager = GameObject.Find("CheckpointManager").GetComponent<CheckpointManager>();
+        MenuManager = GameObject.Find("MenuManager").GetComponent<MenuManager>();
         ExtraFunctions = GameObject.Find("ExtraFunctions").GetComponent<ExtraFunctions>();
 
         Player = GameObject.Find("Player").transform;
@@ -32,13 +34,13 @@ public class DeathManager : MonoBehaviour
     void Update()
     {
         if (Player.position.y <= DeathLevel)
+        {
+            MenuManager.AnimationTime = 0f;
             StatsController.Health = 0;
+        }
 
         if (StatsController.Health == 0 && !IsDead)
-        {
-            CheckpointManager.Lives--;
-            IsDead = true;
-        }
+            StartCoroutine(ToggleDeath());
 
         if (CheckpointManager.Lives == 0)
             CheckpointManager.LatestCheckpoint = CheckpointManager.StartingCheckpoint;
@@ -51,5 +53,12 @@ public class DeathManager : MonoBehaviour
         if (CheckpointManager.Lives == 0)
             CheckpointManager.Lives = 3;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    IEnumerator ToggleDeath()
+    {
+        yield return new WaitForSeconds(MenuManager.AnimationTime);
+        CheckpointManager.Lives--;
+        IsDead = true;
     }
 }

@@ -42,7 +42,7 @@ public class CharacterController2D : MonoBehaviour
 
     void Update()
     {
-        if (StatsController.Health == 0 || Time.timeScale == 0f) return;
+            // if (StatsController.Health == 0 || Time.timeScale == 0f) return;
 
         IsGrounded = CollidesWithGround(this.transform);
         IsWalking = GetMovement() != Mathf.Floor(0);
@@ -113,42 +113,57 @@ public class CharacterController2D : MonoBehaviour
         this.GetComponent<Rigidbody2D>().AddForce(new Vector2(ForceX, ForceY), ForceMode2D.Impulse);
     }
 
+    void EnableDamage()
+    {
+        TakeDamage = false;
+    }
+
+    IEnumerator DestroyObject(GameObject Object)
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(Object);
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (TakeDamage) return;
+
         if (other.CompareTag("Checkpoint"))
         {
             Vector3 CheckpointPosition = other.transform.position;
+
             CheckpointManager.LatestCheckpoint = new Vector3(CheckpointPosition.x, CheckpointPosition.y - 1.5f, CheckpointPosition.z);
         }
         
         if (other.CompareTag("Damage") && !TakeDamage)
         {
+            if (other.GetComponent<PumpkinController>().IsDead == true) return;
+
             StatsController.Health--;
             if (transform.position.x > other.transform.position.x)
-                Launch(5f, 2f);
+                Launch(3.5f, 2f);
             else
-                Launch(-5f, 2f);
+                Launch(-3.5f, 2f);
+
             TakeDamage = true;
         }
+
         if (other.CompareTag("Destroy") && !TakeDamage)
         {
-            Destroy(other.transform.parent.gameObject);
+            GameObject Pumpkin = other.transform.parent.gameObject;
+
+            Pumpkin.GetComponent<PumpkinController>().IsDead = true;
+            StartCoroutine(DestroyObject(Pumpkin));
             Launch(3f, 10f);
         }
 
         if (other.CompareTag("Health") && StatsController.Health != StatsController.HealthMax)
         {
             StatsController.Health++;
+
             Destroy(other.gameObject);
         }
 
-        StartCoroutine(EnableDamage());
-    }
-
-    IEnumerator EnableDamage()
-    {
-        yield return new WaitForSecondsRealtime(1);
-        TakeDamage = false;
+        Invoke("EnableDamage", 0.825f);
     }
 }

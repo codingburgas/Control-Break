@@ -30,9 +30,5 @@ public class CheckpointManager : MonoBehaviour
     void Start()
     {
         LatestCheckpoint = Player.position;
-
-        CharacterController = Player.GetComponent<CharacterController2D>();
-        CameraController = GameObject.Find("CameraController2D").GetComponent<CameraController2D>();
-        DeathManager = GameObject.Find("DeathManager").GetComponent<DeathManager>();
     }
 }

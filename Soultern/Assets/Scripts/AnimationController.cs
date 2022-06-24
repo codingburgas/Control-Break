@@ -13,7 +13,6 @@ public class AnimationController : MonoBehaviour
     private CharacterController2D CharacterController;
     private WoodsmanController WoodsmanController;
     private StatsController StatsController;
-    private DeathManager DeathManager;
 
     void Start()
     {
@@ -26,7 +25,6 @@ public class AnimationController : MonoBehaviour
         CharacterController = Player.GetComponent<CharacterController2D>();
         WoodsmanController = Woodsman.GetComponent<WoodsmanController>();
         StatsController = GameObject.Find("StatsController").GetComponent<StatsController>();
-        DeathManager = GameObject.Find("DeathManager").GetComponent<DeathManager>();
     }
 
     void Update()
@@ -34,7 +32,7 @@ public class AnimationController : MonoBehaviour
         PlayerAnimator.SetBool("IsWalking", CharacterController.IsWalking);
         PlayerAnimator.SetFloat("VelocityY", CharacterController.GetVelocity().y);
         PlayerAnimator.SetBool("TakenDamage", CharacterController.TakeDamage);
-        PlayerAnimator.SetBool("IsDead", DeathManager.IsDead);
+        PlayerAnimator.SetBool("IsDead", StatsController.Health == 0);
         
         WoodsmanAnimator.SetBool("WillThrow", WoodsmanController.WillThrowAxe);
     }
