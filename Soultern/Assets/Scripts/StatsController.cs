@@ -14,7 +14,7 @@ public class StatsController : MonoBehaviour
     [HideInInspector] public int Stamina = 0;
     [HideInInspector] public int StaminaMax = 360;
 
-    private int JumpDrain = 90;
+    private int JumpDrain = 60;
 
     private bool CanRegen;
 
@@ -37,7 +37,7 @@ public class StatsController : MonoBehaviour
             CanRegen = false;
 
         CharacterController.CanUse = Stamina > 0;
-        CharacterController.CanJump = Stamina > 90;
+        CharacterController.CanJump = Stamina > JumpDrain;
 
         if (Input.GetKey(CharacterController.SprintKey))
         {

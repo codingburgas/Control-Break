@@ -7,7 +7,6 @@ public class DeathManager : MonoBehaviour
 {
     private StatsController StatsController;
     private CharacterController2D CharacterController;
-    private MenuManager MenuManager;
     private ExtraFunctions ExtraFunctions;
 
     private Transform Player;
@@ -20,7 +19,6 @@ public class DeathManager : MonoBehaviour
     {
         StatsController = GameObject.Find("StatsController").GetComponent<StatsController>();
         CharacterController = GameObject.Find("Player").GetComponent<CharacterController2D>();
-        MenuManager = GameObject.Find("MenuManager").GetComponent<MenuManager>();
         ExtraFunctions = GameObject.Find("ExtraFunctions").GetComponent<ExtraFunctions>();
 
         Player = GameObject.Find("Player").transform;

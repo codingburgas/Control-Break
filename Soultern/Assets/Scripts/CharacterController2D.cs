@@ -37,7 +37,7 @@ public class CharacterController2D : MonoBehaviour
 
         Time.timeScale = 1f;
         transform.position = CheckpointManager.LatestCheckpoint;
-        Camera.main.transform.position = new Vector3(CheckpointManager.LatestCheckpoint.x, CheckpointManager.LatestCheckpoint.y + 2.25f, Camera.main.transform.position.z);
+        Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y + 2.25f, Camera.main.transform.position.z);
     }
 
     void Update()
@@ -134,7 +134,7 @@ public class CharacterController2D : MonoBehaviour
         if (other.CompareTag("Destroy") && !TakeDamage)
         {
             Destroy(other.transform.parent.gameObject);
-            Launch(3f, 7.5f);
+            Launch(3f, 10f);
         }
 
         if (other.CompareTag("Health") && StatsController.Health != StatsController.HealthMax)
