@@ -71,7 +71,7 @@ public class CharacterController2D : MonoBehaviour
         
         if (GetMovement() != 0 && !Footstep.isPlaying && IsGrounded)
             Footstep.Play();
-        else if (GetMovement() == 0)
+        else if (GetMovement() == 0 || !IsGrounded)
             Footstep.Stop();
     }
 
@@ -154,6 +154,8 @@ public class CharacterController2D : MonoBehaviour
             if (other.GetComponent<PumpkinController>().IsDead == true) return;
 
             StatsController.Health--;
+            other.GetComponent<PumpkinController>().DamageSound.Play();
+
             if (transform.position.x > other.transform.position.x)
                 Launch(3.5f, 2f);
             else

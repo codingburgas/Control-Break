@@ -31,7 +31,7 @@ public class DeathManager : MonoBehaviour
         LivesText = ExtraFunctions.FindInactive("Lives");
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (Player.position.y <= DeathLevel)
         {
@@ -58,7 +58,8 @@ public class DeathManager : MonoBehaviour
     IEnumerator ToggleDeath()
     {
         yield return new WaitForSeconds(MenuManager.AnimationTime);
-        CheckpointManager.Lives--;
+        if (!IsDead)
+            CheckpointManager.Lives--;
         IsDead = true;
     }
 }
