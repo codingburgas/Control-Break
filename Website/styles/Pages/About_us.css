@@ -1,0 +1,59 @@
+/*Import font for the text under the pictures*/
+@import url(//fonts.googleapis.com/css?family=Montserrat:300,500);
+
+/*Style the about us images*/
+#photos{
+    border-radius: 30px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+/*Style the text under the pictures*/
+@import url(//fonts.googleapis.com/css?family=Montserrat:300,500);
+
+.team4 {
+    background-color: #0C1122;
+    font-family: "Montserrat", sans-serif;
+    color: #CCDAE5;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+.team4 h1,
+.team4 h2,
+.team4 h3,
+.team4 h4,
+.team4 h5
+{
+    color: #CCDAE5;
+}
+
+.team4 h3 {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    font-size: 2.75em;
+}
+
+.team4 .font-weight-medium {
+    font-weight: 500;
+}
+
+.team4 h5 {
+    font-size: 1.5em;
+}
+
+.team4 h6 {
+    color: #2D726E;
+    font-size: 1em;
+}
+
+
+
+.forest-separator
+{
+    background: url(../../images/seperators_and_others/sep-forest-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+

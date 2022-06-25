@@ -1,0 +1,50 @@
+#github_picture{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    vertical-align:-25rem;
+}
+#forth_page{
+    margin-left: 0;
+    top: 0;
+    bottom:0;
+}
+#github_text{
+    width: 100%;
+    margin-left: 5%;
+    margin-top:40%;
+}
+#button_for_github{
+    width: 45%;
+    height: 50px;
+    background-color: grey;
+    border-radius: 45px;
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    margin-left: 3.5rem;
+    transition: background-color 0.4s ease-in-out;
+    border-color: rgba(225,225,225,0);
+
+}
+#button_for_github:hover{
+background-color: green;
+}
+@media (max-width: 800px ){
+    #github_picture{
+        width: 100%;
+        height: 100%;
+        margin-top:0;
+
+    }
+    #github_text{
+        margin-left:0;
+        width: 100%;
+        height: 100%;
+        margin-top: 1rem;
+        
+    }
+    .col-md-6{
+        margin-top:0;
+        padding: 0;
+    }
+}

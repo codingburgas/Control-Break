@@ -1,410 +1,422 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title>Soultern</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="styles/bootstrap.min.css" rel="stylesheet" />
-  <link href="styles/styles.css" rel="stylesheet" type="text/css" />
-  <link href="styles/footer.css" rel="stylesheet" type="text/css" />
-  <link href="styles/back_to_top_button.css" rel="stylesheet" type="text/css" />
-  <link href="styles/navigation_bar.css" rel="stylesheet" type="text/css" />
-  <link href="styles/first_page_style.css" rel="stylesheet" type="text/css" />
+  <!--Add title to the tab bar-->
+    <title>Soultern</title>
+    <meta charset="utf-8">
+    <!--Make the website responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Add style sheets-->
+    <link href="styles/Bootstrap_and_back_to_top_button/bootstrap.min.css" rel="stylesheet"/>
+    <link href="styles/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/Footer_and_navbar/footer.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/Bootstrap_and_back_to_top_button/back_to_top_button.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/Footer_and_navbar/navigation_bar.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/Pages/first_page_style.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/Pages/About_us.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/Pages/Github_page.css" rel="stylesheet" type="text/css"/>
 </head>
-
+     
 <body>
+<!--------------------------------------------------NAVBAR-------------------------------------------------------------------------------->
   <navbar class="navbar navbar-expand-md fixed-top navbar-light font-weight-bold">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#home_page">
-        <img id="game_name" src="images/logo/game_name.png">
-
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-
-          <li class="nav-item">
-            <a class="nav-link" href="#About_us">About us</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#plot">Plot</a>
-          </li>
-
-        </ul>
-      </div>
+      <!--Add logo and linked it to the first page-->
+        <a class="navbar-brand" href="#home_page">
+           <img id="game_name" src="images/logo/game_name.png">
+        </a>
+        <!--Add button when the page's width is smaller-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--Add buttons to the navigation bar-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                    <a class="nav-link" id="about_us" href="#About_us">About us</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" id="plot1" href="#plot">Plot</a>
+                </li>
+                
+            </ul>
+        </div>
     </div>
-  </navbar>
+</navbar>
+    
 
-  <!-------------------------------------------->
+    
+ <!-------------------------------------------------FIRST PAGE----------------------------------------------------------------> 
+ <!--Add the main page-->
   <main id="home_page" class="main-homepage">
     <div class="tilt-conainer">
       <div class="main-bg">
-
-        <div class="hero--row">
-          <div class="hero--wrapper">
-            <h1>Welcome to Soultern!</h1>
-            <p>We have been waiting for you.</p>
-            <div id="hero--buttons">
-              <a href="https://unsplash.com/photos/1PtvoXbO6-c/download?force=trues" download="GFG">
-                <button id="finance-btn" type="submit">Download</button>
-              </a>
-              <a href="#Explore"><button id="refer-btn">Explore</button></a>
+        <!--Add the text in front of the video-->
+          <div class="hero--row">
+            <div class="hero--wrapper">
+              <h1>Welcome to Soultern!</h1>
+                <p>We have been waiting for you.</p>
+                <!--Add buttons for downloading the game and for going to the game's level-->
+                   <div id="hero--buttons">
+                    <a href="https://unsplash.com/photos/1PtvoXbO6-c/download?force=trues" download="GFG">
+                     <button id="finance-btn" type="submit">Download</button>
+                     </a>
+                     <a href="#Explore"><button id="refer-btn">Explore</button></a>
+                   </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
-    </div>
-  </main>
+  </main >
 
-  <!--------------------------------------------------------------------------------->
+<!------------------------------------------------DIVIDER------------------------------------------------------------------------------------>
 
-
+<!--Add divider between the pages-->
   <div class="section" id="four" style="width:100%">
-    <object id="plot" data="images/seperators_and_others/branches4.svg" width="100%" height="1%"> </object>
+    <object id="plot" data="images/seperators_and_others/branches3.svg" width="100%" height="1%"> </object>
   </div>
 
-  <!---------------------------------------------------------------------------------------------->
-  <section id="features" class="features">
+<!------------------------------------------------SECOND_PAGE------------------------------------------------------------------------------------->
+<!--Add page with the plot if the game and its poster-->
+  <section id="features"   class="features">
     <div class="container  text-center">
+        <div class="container">
+          <!--Add the poster-->
+            <div class="row featurette" id="row">
+                <div class="col-md-4">
+                  <img class="img-inline poster" src="images/levels_posters/Poster.jpg" alt="poster" width="300px">
+                </div>
+            <!--Add the text of the plot-->        
+              <div class="col-md-8 plot_text text-xs-center">
+                  <div id="plot_headline" class="col-md-12"><h2 >The plot of the game</h2></div>
+                <div class="text-xs-center"><p>The events in the game take place in the Magic Forest of Soultern.The mission of our main character Ganyo is to beat the big boss at the end of the game and to return to the real world.The game has four levels with different specifics and on each level there is one boss, which the player must kill so that he/she can continue playing.</p></div>
+              </div>
+          </div>
+      </div>    
+  </div>
+
+<!------------------------------------------------DIVIDER----------------------------------------------------------------------->
+<!--Add divider between the pages-->
+<div class="section" id="four" style="width:100%">
+  <object id="Explore" data="images/seperators_and_others/branches3.svg" width="100%" height="1%"> </object>
+</div>
+  
+<!------------------------------------------------THIRD_PAGE----------------------------------------------------------------------------------------->   
+<!--Add text of the game's different levels -->
+    <div class="container mt-4 text-center " id="section2" >
+        <h1 >Explore some of the Soultern's levels</h1>
+          <div class="row no-gutters"  >
+              <!--For the summer-->
+              <div class="col-md-4">
+                <img class="section-image" src="images/levels_posters/summer.png" alt="poster">
+                <h2>Summer:</h2>
+                <p class="center-block inner">You continue your journey and after hearing strange noises you make your first friend in the game.</p>
+              </div>
+              <!--For the fall-->
+              <div class="col-md-4">
+                <img class="section-image" src="images/levels_posters/fall.png" alt="poster">
+                <h2>Fall:</h2>
+                <p class="center-block ">While travelling on a steamship, the Beast takes over the level's boss and kidnaps your friend.</p>
+              </div>
+              <!--For the winter-->
+              <div class="col-md-4">
+                <img class="section-image" src="images/levels_posters/winter.png" alt="poster" >
+                <h2>Winter:</h2>
+                <p class="center-block inner">As the winter is the last season of the year this is our game last level. During this level you have to fight with your last enemy so your character can go home.</p>
+              </div>
+
+          </div>
+    </div>
+
+<!------------------------------------------------DIVIDER----------------------------------------------------------------------------------------------->  
+<!--Add divider between the pages-->     
+<div class="section" id="four" style="width:100%">
+  <object id="About_us"data="images/seperators_and_others/branches3.svg" width="100%" height="10%"> </object>
+</div>  
+<!------------------------------------------------FOURTH_PAGE------------------------------------------------------------------------------------------->
+
+<section id="forth_page" class="features">
+  <div class="container  text-center">
       <div class="container">
-        <div class="row featurette">
-
-          <div class="col-md-4">
-
-            <img class="img-inline poster" src="images/levels_posters/Poster.jpg" alt="poster" width="300px">
-
-          </div>
-
-          <div class="col-md-8 plot_text text-xs-center">
-            <div id="plot_headline" class="col-md-12">
-              <h2>The plot of the game</h2>
+        <!--Add the poster-->
+          <div class="row ">
+              <div class="col-md-6">
+                <img src="images/About_us/Github_image.png" id="github_picture" >
+              </div>
+          <!--Add the text of the plot-->        
+            <div class="col-md-6 text-xs-center">
+              <div><p id="github_text">This is our Github page. This is the place where we commited our code so that the other members of the team can see and use it to do their part of this projects. Github is also the place where you can see the game and the website.</p></div>
+              <div class="col-md-12 text-xs-center">
+                <a href="https://github.com/codingburgas/Control-Break" target="_blank"><button id="button_for_github">Let's go to our Github page!</button></a>
+              </div>
             </div>
-            <div class="text-xs-center">
-              <p>The events in the game take place in the Magic Forest of Soultern.The mission of our main character
-                Ganyo is to beat the big boss at the end of the game and to return to the real world.The game has four
-                levels with different specifics and on each level there is one boss, which the player must kill so that
-                he/she can continue playing.</p>
-            </div>
-          </div>
+            
         </div>
-      </div>
-    </div>
+    </div>    
+</div>
 
-    <!------------------------------------------------------------------------------->
-    <div class="section" id="four" style="width:100%">
-      <object id="Explore" data="images/seperators_and_others/branches4.svg" width="100%" height="1%"> </object>
-    </div>
 
-    <!------------------------------------------------------------------------------------->
 
-    <div class="container mt-4 text-center " id="section2">
-      <h1>Explore some of the Soultern's levels</h1>
-      <div class="row no-gutters">
-
-        <div class="col-md-4">
-          <img class="section-image" src="images/levels_posters/summer.png" alt="poster">
-          <h2>Summer:</h2>
-          <p class="center-block inner">You continue your journey and after hearing strange noises you make your first
-            friend in the game.</p>
-        </div>
-
-        <div class="col-md-4">
-          <img class="section-image" src="images/levels_posters/fall.png" alt="poster">
-          <h2>Fall:</h2>
-          <p class="center-block ">While travelling on a steamship, the Beast takes over the level's boss and kidnaps
-            your friend.</p>
-        </div>
-        <div class="col-md-4">
-          <img class="section-image" src="images/levels_posters/winter.png" alt="poster">
-          <h2>Winter:</h2>
-          <p class="center-block inner">As the winter is the last season of the year this is our game last level. During
-            this level you have to fight with your last enemy so your character can go home.</p>
-        </div>
-
-      </div>
-    </div>
-
-    <!------------------------------------------------------------------------------------------------------>
-    
-    <div class="forest-separator"></div>
-
-    <!------------------------------------------------>
+<!------------------------------------------------DIVIDER----------------------------------------------------------------------------------------------->  
+<!--Add divider between the pages-->     
+<div class="forest-separator"></div>
+<!------------------------------------------------FIFTH_PAGE----------------------------------------------------------------->
+<!--Add information about us and the game-->
     <div class="py-5 team4">
       <div class="container">
-        <div class="row justify-content-center mb-4">
-          <div class="col-md-7 text-center">
-            <h3 id="headline">About us and our project</h3>
-          </div>
+            <div class="row justify-content-center mb-4">
+              <div class="col-md-7 text-center">
+                <h3  id="headline" style="margin-top:10%;">About us and our project</h3>
+              </div>
+            </div>
+
+                  <!--Add picture and name to the person-->
+                  <div class="row">
+                    <div class="col-lg-3 mb-4">
+                      <div class="row">
+                        <div class="col-md-12">
+                            <img class="img-fluid rounded-circle"id="photos" src="images/About_us/Stas-10class.png" alt="Stas-10class" style="width: 220px;">
+                        </div>
+                        
+                        <div class="col-md-12 text-center">
+                            <div>
+                                <h5 class="mt-4 font-weight-medium  ">Stas Uzunov</h5>
+                                <h6 class="subtitle mb-3">Scrum Trainer</h6>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  <!--Add picture and name to the person-->
+                    <div class="col-lg-3 mb-4">
+                      <div class="row">
+                        <div class="col-md-12">
+                            <img class="img-fluid rounded-circle"id="photos" src="images/About_us/Daniel-10class.png" alt="Daniel-10class" style="width: 220px;">
+                        </div>
+                        
+                        <div class="col-md-12 text-center">
+                            <div >
+                                <h5 class="mt-4 font-weight-medium  ">Daniel Georgiev</h5>
+                                <h6 class="subtitle mb-3">Desiger</h6>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!--Add picture and name to the person-->
+                    <div class="col-lg-3 mb-4">
+                      <div class="row">
+                        <div class="col-md-12">
+                            <img class="img-fluid rounded-circle" id="photos" src="images/About_us/Teodora-10class.png" alt="Teodora-10class" style="width: 220px;">
+                        </div>
+                        
+                        <div class="col-md-12 text-center">
+                            <div >
+                                <h5 class="mt-4 font-weight-medium  ">Teodora Kompanska</h5>
+                                <h6 class="subtitle mb-3">Desiger</h6>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--Add picture and name to the person-->
+                    <div class="col-lg-3 mb-4">
+                      <div class="row">
+                        <div class="col-md-12">
+                            <img class="img-fluid rounded-circle" id="photos"  src="images/About_us/Galin-9class.png" alt="Galin-9class" style="width: 220px;">
+                        </div>
+                        
+                        <div class="col-md-12 text-center">
+                            <div >
+                                <h5 class="mt-4 font-weight-medium  ">Galin Georgiev</h5>
+                                <h6 class="subtitle mb-3">Back-End Developer</h6>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--Add picture and name to the person-->
+                    <div class="col-lg-3 mb-4">
+                      <div class="row">
+                        <div class="col-md-12">
+                            <img class="img-fluid rounded-circle" id="photos"  src="images/About_us/Jordan-9class.png" alt="Jordan-9class" style="width: 220px;">
+                        </div>
+                        
+                        <div class="col-md-12 text-center">
+                            <div >
+                                <h5 class="mt-4 font-weight-medium  ">Yordan Stoyanov</h5>
+                                <h6 class="subtitle mb-3">Front-End Developer</h6>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--Add picture and name to the person-->
+                    <div class="col-lg-3 mb-4">
+                      <div class="row">
+                        <div class="col-md-12">
+                            <img class="img-fluid rounded-circle" id="photos" src="images/About_us/Petar-9class.png" alt="Petar-9class" style="width: 220px;">
+                        </div>
+                        
+                        <div class="col-md-12 text-center">
+                            <div >
+                                <h5 class="mt-4 font-weight-medium  ">Petar Matsaliev</h5>
+                                <h6 class="subtitle mb-3">Back-End Developer</h6>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--Add picture and name to the person-->
+                    <div class="col-lg-3 mb-4">
+                      <div class="row">
+                        <div class="col-md-12">
+                            <img class="img-fluid rounded-circle" id="photos" src="images/About_us/Dimitar-8class.png" alt="Dimitar-8class" style="width: 220px;">
+                        </div>
+                        
+                        <div class="col-md-12 text-center">
+                            <div >
+                                <h5 class="mt-4 font-weight-medium ">Dimitar Georgiev</h5>
+                                <h6 class="subtitle mb-3">Web Developer</h6>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--Add picture and name to the person-->
+                    <div class="col-lg-3 mb-4">
+                      <div class="row">
+                        <div class="col-md-12">
+                            <img class="img-fluid rounded-circle" id="photos" src="images/About_us/Nadezhda-8class.png" alt="Nadezhda-8class" style="width: 220px;">
+                        </div>
+                        
+                        <div class="col-md-12 text-center">
+                            <div >
+                                <h5 class="mt-4 font-weight-medium ">Nadezhda Ivanova</h5>
+                                <h6 class="subtitle mb-3">Web Developer</h6>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--Add information about the game-->
+                    <div id="container_about_our_game">
+                      <p id="text_about_our_game">Soultern is a 2D platform single player adventure game, made with C# for a school project. The main goal of the game is to entertain the players. They have to lead the main character Ganyo to his real world.</p>
+                    </div>
+        
         </div>
+    </div>
 
-        <div class="row">
-          <div class="col-lg-3 mb-4">
-            <div class="row">
-              <div class="col-md-12">
-                <img class="img-fluid rounded-circle" id="photos" src="images/About_us/Stas-10class.png"
-                  alt="Stas-10class" style="width: 220px;">
-              </div>
+<!-----------------------------------------------DIVIDER------------------------------------------------------------------------------------>
 
-              <div class="col-md-12 text-center">
-                <div>
-                  <h5 class="mt-4 font-weight-medium  ">Stas Uzunov</h5>
-                  <h6>Scrum Trainer</h6>
-                </div>
-              </div>
-            </div>
-          </div>
+<!--Add divider between the pages-->
+ <div class="section featurette-divider" id="four" >
+  <object data="images/seperators_and_others/branches3.svg" width="100%" height="10%"> </object>
+</div>
+<!-----------------------------------------------FOOTER----------------------------------------------------------------------------------->
+   <!-- Footer -->
+ <footer class="page-footer font-small stylish-color-dark pt-4">
 
+     <!-- Footer Links -->
+     <div class="container-footer text-center text-md-left">
 
+         <!-- Grid row -->
+         <div class="row" style="width: 100%;">
 
-          <div class="col-lg-3 mb-4">
-            <div class="row">
-              <div class="col-md-12">
-                <img class="img-fluid rounded-circle" id="photos" src="images/About_us/Daniel-10class.png"
-                  alt="Daniel-10class" style="width: 220px;">
-              </div>
+             <!-- Grid column -->
+             <div class="col-md-7 col-lg-4">
 
-              <div class="col-md-12 text-center">
-                <div>
-                  <h5 class="mt-4 font-weight-medium  ">Daniel Georgiev</h5>
-                  <h6>Desiger</h6>
-                </div>
-              </div>
-            </div>
-          </div>
+                 <!-- Content -->
+                 <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Questions</h5>
+                 <p id="text_in_footer">If you have any questions we will be happy to answer them.</p>
 
+             </div>
+            <!--The names of the team -->
+             <div class="col-md-7 col-lg-4">
 
-          <div class="col-lg-3 mb-4">
-            <div class="row">
-              <div class="col-md-12">
-                <img class="img-fluid rounded-circle" id="photos" src="images/About_us/Teodora-10class.png"
-                  alt="Teodora-10class" style="width: 220px;">
-              </div>
+                 <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Creators</h5>
 
-              <div class="col-md-12 text-center">
-                <div>
-                  <h5 class="mt-4 font-weight-medium  ">Teodora Kompanska</h5>
-                  <h6>Designer</h6>
-                </div>
-              </div>
-            </div>
-          </div>
+                 <ul class="list-unstyled" id="footer_list" >
+                     <!--Link the names with their emails so you can send them an email when you click on their name-->
+                     <li >
+                       <a href = "mailto: dzgeorgiev19@codingburgas.bg" class="emails">Daniel Georgiev</a>
+                     </li>
+                     <li>
+                       <a href = "mailto: ssuzunov19@codingburgas.bg" class="emails">Stas Uzunov</a>
+                     </li>
+                     <li>
+                       <a href = "mailto: tnkompanska19@codingburgas.bg" class="emails">Teodora Kompanska</a>
+                     </li>
+                     <li>
+                       <a href = "mailto: gggeorgiev20@codingburgas.bg" class="emails">Galin Georgiev</a>
+                     </li>
+                     
+                 </ul>
+                 
+                <!--Link the names with their emails so you can send them an email when you click on their name-->
+                 <ul class="list-unstyled"  id="footer_list">
+                   <li>
+                     <a href = "mailto: ysstoyanov20@codingburgas.bg" class="emails">Yordan Stoyanov</a>
+                   </li>
+                   <li>
+                     <a href = "mailto: pdmatsaliev20@codingburgas.bg" class="emails">Petar Matsaliev</a>
+                   </li>
+                   <li>
+                     <a href = "mailto: dkgeorgiev21@codingburgas.bg" class="emails">Dimitar Georgiev</a>
+                   </li>
+                   <li>
+                     <a href = "mailto: ntivanova21@codingburgas.bg" class="emails">Nadezhda Ivanova</a>
+                   </li>
+                 </ul>
+             </div>
 
+             
 
-          <div class="col-lg-3 mb-4">
-            <div class="row">
-              <div class="col-md-12">
-                <img class="img-fluid rounded-circle" id="photos" src="images/About_us/Galin-9class.png"
-                  alt="Galin-9class" style="width: 220px;">
-              </div>
+             <div class="col-md-7 col-lg-4">
 
-              <div class="col-md-12 text-center">
-                <div>
-                  <h5 class="mt-4 font-weight-medium  ">Galin Georgiev</h5>
-                  <h6>Back-End Developer</h6>
-                </div>
-              </div>
-            </div>
-          </div>
+                 <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contact us!</h5>
+                  <!--Add a contact us email-->
+                 <ul class="list-unstyled">
+                     <li>
+                         <a href="mailto: Soultern@codingburgas.bg" style="color:rgb(98, 148, 190); font-size: 15pt;">Soultern@codingburgas.bg</a>
+                     </li>
+                 </ul>
 
-          <div class="col-lg-3 mb-4">
-            <div class="row">
-              <div class="col-md-12">
-                <img class="img-fluid rounded-circle" id="photos" src="images/About_us/Jordan-9class.png"
-                  alt="Jordan-9class" style="width: 220px;">
-              </div>
+             </div>
 
-              <div class="col-md-12 text-center">
-                <div>
-                  <h5 class="mt-4 font-weight-medium  ">Yordan Stoyanov</h5>
-                  <h6>Front-End Developer</h6>
-                </div>
-              </div>
-            </div>
-          </div>
+         </div>
 
-          <div class="col-lg-3 mb-4">
-            <div class="row">
-              <div class="col-md-12">
-                <img class="img-fluid rounded-circle" id="photos" src="images/About_us/Petar-9class.png"
-                  alt="Petar-9class" style="width: 220px;">
-              </div>
+     </div>
 
-              <div class="col-md-12 text-center">
-                <div>
-                  <h5 class="mt-4 font-weight-medium  ">Petar Matsaliev</h5>
-                  <h6>Back-End Developer</h6>
-                </div>
-              </div>
-            </div>
-          </div>
+     <!-- Copyright -->
+     <div class="footer-copyright text-center ">© 2022 Soultern
+         <a style=" color:rgb(98, 148, 190); " href="index.html"> Soultern.codingburgas.org</a>
+     </div>
+
+ </footer>
 
 
-          <div class="col-lg-3 mb-4">
-            <div class="row">
-              <div class="col-md-12">
-                <img class="img-fluid rounded-circle" id="photos" src="images/About_us/Dimitar-8class.png"
-                  alt="Dimitar-8class" style="width: 220px;">
-              </div>
+<!--Add back to top button-->
+ <button onclick="topFunction()" id="back-to-top" class="back-to-top d-flex align-items-center justify-content-center" style="width: 3rem; height: 3rem;"><img src="images/seperators_and_others/up-arrow.png" style="width: 15px; height: 15px; " id="pointer"></i></button>
+   
 
-              <div class="col-md-12 text-center">
-                <div>
-                  <h5 class="mt-4 font-weight-medium ">Dimitar Georgiev</h5>
-                  <h6>Web Developer</h6>
-                </div>
-              </div>
-            </div>
-          </div>
+ 
 
-          <div class="col-lg-3 mb-4">
-            <div class="row">
-              <div class="col-md-12">
-                <img class="img-fluid rounded-circle" id="photos" src="images/About_us/Nadezhda-8class.png"
-                  alt="Nadezhda-8class" style="width: 220px;">
-              </div>
+<!------------------------------------------------SCRIPTS------------------------------------------------------------------------------------>  
+<!--Add java script sheets-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-              <div class="col-md-12 text-center">
-                <div>
-                  <h5 class="mt-4 font-weight-medium ">Nadezhda Ivanova</h5>
-                  <h6>Web Developer</h6>
-                </div>
-              </div>
-            </div>
-          </div>
+  <script src="js/main.js"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
-          <div id="container_about_our_game">
-            <p id="text_about_our_game">This is a C# adventure game, made for a school project. The main goal of our
-              game is to entertain the players. They have to lead the main character to his real world .</p>
-          </div>
-
-        </div>
-      </div>
-      
-
-      <!--------------------------------------------------------------------------------------->
-
-
-      <div class="section featurette-divider" id="four">
-        <object data="images/seperators_and_others/branches4.svg" width="100%" height="10%"> </object>
-      </div>
-      <!---------------------------------------------------------------------------------->
-      <!-- Footer -->
-      <footer class="page-footer font-small stylish-color-dark pt-4">
-
-        <!-- Footer Links -->
-        <div class="container-footer text-center text-md-left">
-
-          <!-- Grid row -->
-          <div class="row" style="width: 100%;">
-
-            <!-- Grid column -->
-            <div class="col-md-7 col-lg-4">
-
-              <!-- Content -->
-              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Questions</h5>
-              <p id="text_in_footer">If you have any questions we will be happy to answer them.</p>
-
-            </div>
-
-            <div class="col-md-7 col-lg-4">
-
-              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Creators</h5>
-
-              <ul class="list-unstyled" id="footer_list">
-
-                <li>
-                  <a href="mailto: dzgeorgiev19@codingburgas.bg" class="emails">Daniel Georgiev</a>
-                </li>
-                <li>
-                  <a href="mailto: ssuzunov19@codingburgas.bg" class="emails">Stas Uzunov</a>
-                </li>
-                <li>
-                  <a href="mailto: tnkompanska19@codingburgas.bg" class="emails">Teodora Kompanska</a>
-                </li>
-                <li>
-                  <a href="mailto: gggeorgiev20@codingburgas.bg" class="emails">Galin Georgiev</a>
-                </li>
-
-              </ul>
-
-              <ul class="list-unstyled" id="footer_list">
-                <li>
-                  <a href="mailto: ysstoyanov20@codingburgas.bg" class="emails">Yordan Stoyanov</a>
-                </li>
-                <li>
-                  <a href="mailto: pdmatsaliev20@codingburgas.bg" class="emails">Petar Matsaliev</a>
-                </li>
-                <li>
-                  <a href="mailto: dkgeorgiev21@codingburgas.bg" class="emails">Dimitar Georgiev</a>
-                </li>
-                <li>
-                  <a href="mailto: ntivanova21@codingburgas.bg" class="emails">Nadezhda Ivanova</a>
-                </li>
-              </ul>
-            </div>
-
-
-
-            <div class="col-md-7 col-lg-4">
-
-              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contact us!</h5>
-
-              <ul class="list-unstyled">
-                <li>
-                  <a href="mailto: Soultern@codingburgas.bg"
-                    style="color:rgb(98, 148, 190); font-size: 15pt;">Soultern@codingburgas.bg</a>
-                </li>
-              </ul>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- Copyright -->
-        <div class="footer-copyright text-center ">© 2022 Soultern
-          <a style=" color:rgb(98, 148, 190); " href="index.html"> Soultern.codingburgas.org</a>
-        </div>
-
-      </footer>
-
-
-
-      <button onclick="topFunction()" id="back-to-top"
-        class="back-to-top d-flex align-items-center justify-content-center" style="width: 3rem; height: 3rem;"><i
-          class="bi bi-arrow-up-short"><img src="images/seperators_and_others/up-arrow.png"
-            style="width: 15px; height: 15px; " id="pointer"></i></button>
-
-
-
-
-
-
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
-      <script src="js/main.js"></script>
-      <script src="js/scripts.js"></script>
-      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-
-      <script>hljs.initHighlightingOnLoad();</script>
-
+  <script>hljs.initHighlightingOnLoad();</script>
+    
 </body>
-
 </html>
