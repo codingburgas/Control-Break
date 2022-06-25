@@ -57,6 +57,7 @@ public class DeathManager : MonoBehaviour
 
     IEnumerator ToggleDeath()
     {
+        Time.timeScale = 1.0f;
         yield return new WaitForSeconds(MenuManager.AnimationTime);
         if (!IsDead)
             CheckpointManager.Lives--;

@@ -46,7 +46,11 @@ public class CharacterController2D : MonoBehaviour
 
     void Update()
     {
-        if (StatsController.Health == 0 || Time.timeScale == 0f) return;
+        if (StatsController.Health == 0 || Time.timeScale == 0f)
+        {
+            Footstep.Stop();
+            return;
+        }
 
         IsGrounded = CollidesWithGround(this.transform);
         IsWalking = GetMovement() != Mathf.Floor(0);

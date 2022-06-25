@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraController2D : MonoBehaviour
 {
     private Transform MainCamera;
+    private AudioSource Music;
 
     private Transform Player;
 
@@ -15,6 +16,8 @@ public class CameraController2D : MonoBehaviour
     void Start()
     {
         MainCamera = Camera.main.transform;
+
+        Music = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
