@@ -13,7 +13,7 @@
 <hr>
 
 <p align = "center">
-  <img src="(Website/gifs/soultern.gif)" width="1100">
+  <img src="Website/gifs/soultern.gif" width="1100">
 </p>
 
 <h1>📖 About</h1>
