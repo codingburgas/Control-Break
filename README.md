@@ -1,2 +1,4 @@
-# Control-Break
-2122-the-games--adventures-final-project-ssuzunov19 created by GitHub Classroom
+<p align = "center">
+  <img src="Design/logo/soultern-name-white.png#gh-dark-mode-only"/>
+  <img src="Design/logo/soultern-name.png#gh-light-mode-only"/>
+</p>
