@@ -13,7 +13,7 @@
 <hr>
 
 <p align = "center">
-  <img src="https://cdn.discordapp.com/attachments/989209749704835092/990224616104530000/unknown.png" width="1100">
+  <img src="(Website/gifs/soultern.gif)" width="1100">
 </p>
 
 <h1>📖 About</h1>
@@ -39,13 +39,10 @@
 <h1>💻 Used Technologies</h1>
   <h3><big> <img src="https://camo.githubusercontent.com/8d56e87edf99e89bfc457cd62462e0b7aae19e6b197b1df5c542d474d8d76f81/68747470733a2f2f646576656c6f7065722e6665646f726170726f6a6563742e6f72672f7374617469632f6c6f676f2f6373686172702e706e67" alt="C#" width="20" height="20">C# - Main Language</big></h3>
   <h3><big> <img src="https://seeklogo.com/images/U/unity-logo-988A22E703-seeklogo.com.png" alt="Unity" width="20" height="20"> Unity - Game Engine</big></h3>
-  <h3><big> <img src="https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" alt="VSCode" width="30" height="20">VS Code - Text Editor</big></h3>
-  <h3><big> <img src="https://cdn.worldvectorlogo.com/logos/git-bash.svg" alt="Git" width="30" height="20">Git - Source Control</big></h3>
-  <h3><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap logo"width="30" height="20" </a>Bootstrap - Framework</h3>
-  <h3><img src="https://img.icons8.com/color/344/html-5--v1.png" alt="HTML logo" width="30" height="30" />HTML - Webpage</a>
-  <h3><img src="https://img.icons8.com/color/344/css3.png" alt="CSS logo" width="30" height="30" />CSS - Web styling</a>
-  <h3><big> <img src="https://cdn.worldvectorlogo.com/logos/word-1.svg" alt="Word" width="30" height="20">MS Word - Documentation</big></h3>
-  <h3><big> <img src="https://cdn.worldvectorlogo.com/logos/powerpoint-2.svg" alt="PowerPoint" width="30" height="20">MS PowerPoint - Presentation</big></h3>
-<hr>
-
-## <p align = "center">Made with ❤️ by team Control Break</p>
+  <h3><big> <img src="https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" alt="VSCode" width="30" height="20"> VS Code - Text Editor</big></h3>
+  <h3><big> <img src="https://cdn.worldvectorlogo.com/logos/git-bash.svg" alt="Git" width="30" height="20"> Git - Source Control</big></h3>
+  <h3><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap logo"width="30" height="20" </a> Bootstrap - Framework</h3>
+  <h3><img src="https://img.icons8.com/color/344/html-5--v1.png" alt="HTML logo" width="30" height="30" /> HTML - Webpage</a>
+  <h3><img src="https://img.icons8.com/color/344/css3.png" alt="CSS logo" width="30" height="30" /> CSS - Web styling</a>
+  <h3><big> <img src="https://cdn.worldvectorlogo.com/logos/word-1.svg" alt="Word" width="30" height="20"> MS Word - Documentation</big></h3>
+  <h3><big> <img src="https://cdn.worldvectorlogo.com/logos/powerpoint-2.svg" alt="PowerPoint" width="30" height="20"> MS PowerPoint - Presentation</big></h3>
