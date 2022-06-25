@@ -1,6 +1,6 @@
 <p align = "center">
-  <img src="Design/logo/control-break-d1.png#gh-dark-mode-only"/>
-  <img src="Design/logo/control-break-d2.png#gh-light-mode-only"/>
+  <img src="Design/logo/control-break-d1.png#gh-dark-mode-only" width="1000" text-align="center">
+  <img src="Design/logo/control-break-d2.png#gh-light-mode-only"width="1000" text-align="center">
 </p>
 
 <div align = "center">
@@ -11,56 +11,29 @@
 </div>
 
 <hr>
-<p align = "center" style = "font-size:4em">
-  <strong>
-  An Adventure game made in vanilla C##.
-  </strong>
-</p>
-<hr>
 
 <p align = "center">
-  <img src="https://cdn.discordapp.com/attachments/989209749704835092/990224616104530000/unknown.png"/>
+  <img src="https://cdn.discordapp.com/attachments/989209749704835092/990224616104530000/unknown.png" width="1100">
 </p>
 
-<h1>💻 About</h1>
+<h1>📖 About</h1>
+<h3> <big>  It's been a tough night in one of your friends's house. On the way home, a tree branch falls and hits you. You faint and fall.  Later, waking up, you realise, you're somewhere you've never been before. Meet new friends, defeat vicious enemies, explore uncharted lands. Your objective is simple: Find the way home. </h3>
+<h2>🏆 The Team</h2>
+<p><big><a href="https://github.com/SSUzunov19">Stas Uzunov</a>  - Scrum Trainer</big></p>
+<p><big><a href="https://github.com/DZGeorgiev19">Daniel Georgiev</a>  - Scrum Trainer</big></p>
+<p><big><a href="https://github.com/TNKompanska19">Teodora Kompanska</a>  - Scrum Trainer</big></p>
+<p><big><a href="https://github.com/YSStoyanov20">Yordan Stoyanov</a> - Front-end Developer</big></p>
+<p><big><a href="https://github.com/PDMatsaliev20">Petar Matsaliev</a> - Front-end Developer</big></p>
+<p><big><a href="https://github.com/GGGeorgiev20">Galin Georgiev</a> - Back-end Developer</big></p>
+<p><big><a href="https://github.com/NTIvanova21">Nadezhda Ivanova</a> - Web Developer</big></p>
+<p><big><a href="https://github.com/DKGeorgiev21">Dimitar Georgiev</a> - Web Developer</big></p>
 
-### Hello everyone, we are Control Break and presenting Soultern. This is a school adventure game project. This is a 2D single player platform with English as the main language.
 
+<h1>📄 Documentation</h1>
+<h3> ➤ <a href="https://github.com/codingburgas/Control-Break/blob/main/Documentation/Documentation.docx">Documentation</a><img src="https://cdn.worldvectorlogo.com/logos/word-1.svg" alt="Word" width="30" height="20"/> </h3>
+<h3> ➤ <a href="https://github.com/codingburgas/Control-Break/blob/main/Documentation/Presentation.pptx">Presentation </a><img src="https://cdn.worldvectorlogo.com/logos/powerpoint-2.svg" alt="PowerPoint" width="30" height="20"/> </h3>
 <h1>📥 Download</h1>
- <a href="https://1drv.ms/u/s!Asm7loXlxLz7awJdC0Bm97ftQFM?e=D1w20q">Download the Soultern</a>
-
-<h1>🗂️ Tech Stack:</h1>
-
-## Used code editors for the project's realisation:
-<p align="left">
-    <a href="https://visualstudio.microsoft.com/vs/"><img src="https://img.icons8.com/color/344/visual-studio--v2.png" alt="VS logo" width=48px /></a>
-</p>
-
-## Used tools for the visual elements & shared work environment:
-<p align="left">
-    <a href="https://github.com/"><img src="https://img.icons8.com/nolan/344/github.png" alt="GitHub logo" width=52px /></a>
-</p>
-
-## Used technologies for the site's development:
-<p align="left">
-    <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"><img src="https://img.icons8.com/color/344/html-5--v1.png" alt="HTML logo" width=48px /></a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://img.icons8.com/color/344/css3.png" alt="CSS logo" width=48px /></a>
-    <a href="https://getbootstrap.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap logo" width=48px /></a>
-</p>
-
-## Used services for our documentation & presentation:
-<p align="left">
-    <a href="https://www.microsoft.com/en-us/microsoft-365/powerpoint"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/640px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png" alt="MS PowerPoint logo" width=54px /></a>
- 
-</p>
-
-## 📄 Documents
-### Documentation:
-  - [Word]()
-### Presentation:
-  - [PowerPoint]()
-### Trailer:
-  - [Soultern Video]()
+  <h3><a href="https://1drv.ms/u/s!Asm7loXlxLz7awJdC0Bm97ftQFM?e=D1w20q">Download Soultern</a></h3>
 
 ## 📥 Installation & Set Up
 <p> To install our project on your machine you just need to clone it. This can be done by following these steps! </p>
