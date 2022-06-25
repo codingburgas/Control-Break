@@ -37,17 +37,23 @@
     width: 200px;
   }
 /*Style the buttons*/
-  .nav-link{
-    font-size: 1.25rem;
-    color: rgb(150, 145, 145);
-    border-radius: 45px;
-   
+#about_us{
+    font-size: 1.5rem;
+    color: black;
     transition: color 0.4s linear;
   }
-  .nav-link:hover{
-    color: black;
+#about_us:hover{
+    color: rgb(100, 95, 95);
   }
 
+#plot1{
+  font-size: 1.5rem;
+  color: black;
+  transition: color 0.4s linear;
+}
+#plot1:hover{
+  color: rgb(100, 95, 95);
+}
   
   @media (min-width: 1060px ) {
     .navbar-expand-md > .container, .navbar-expand-md > .container-fluid, .navbar-expand-md > .container-lg, .navbar-expand-md > .container-md, .navbar-expand-md > .container-sm, .navbar-expand-md > .container-xl {

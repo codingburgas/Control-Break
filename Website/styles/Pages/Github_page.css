@@ -13,21 +13,21 @@
     width: 100%;
     margin-left: 5%;
     margin-top:40%;
+    
 }
 #button_for_github{
-    width: 45%;
+    width: 35%;
     height: 50px;
-    background-color: grey;
+    background-color: rgb(86, 82, 82);
     border-radius: 45px;
     text-decoration: none;
-    color:rgb(0, 0, 0);
     margin-left: 3.5rem;
-    transition: background-color 0.4s ease-in-out;
+    color:white;
     border-color: rgba(225,225,225,0);
-
+    transition: background-color 0.4s ease-in-out;
 }
 #button_for_github:hover{
-background-color: green;
+    background-color: rgb(172, 169, 169);
 }
 @media (max-width: 800px ){
     #github_picture{
