@@ -34,7 +34,7 @@ public class MenuManager : MonoBehaviour
         IsGameOver = false;
         IsPaused = false;
 
-        AnimationTime = 2.0f;
+        AnimationTime = 5.0f;
     }
 
     void Update()
@@ -72,4 +72,8 @@ public class MenuManager : MonoBehaviour
         Time.timeScale = System.Convert.ToSingle(IsPaused);
         IsPaused = !IsPaused;
     }
+
+    // Main Menu
+
+    // public void 
 }
