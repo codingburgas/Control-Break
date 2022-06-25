@@ -9,7 +9,8 @@ public class CameraController2D : MonoBehaviour
     private Transform Player;
 
     private Vector3 CameraOffset = new Vector3(0, 3.3f, -10);
-    [HideInInspector] public float SmoothEffect = 0.2125f;
+    
+    [HideInInspector] private float SmoothEffect = 0.165f;
 
     void Start()
     {
@@ -20,14 +21,14 @@ public class CameraController2D : MonoBehaviour
     {
         Player = GameObject.Find("Player").transform;
         
-        if (Player.position.y >= -1.77f)
-            SetCameraPosition();
+        SetCameraPosition();
     }
 
     void SetCameraPosition()
     {
         Vector3 velocity = Vector3.zero;
 
-        MainCamera.position = Vector3.SmoothDamp(MainCamera.position, Player.position + CameraOffset, ref velocity, SmoothEffect);
+        Vector3 NewPostion = Vector3.SmoothDamp(MainCamera.position, Player.position + CameraOffset, ref velocity, SmoothEffect);
+        MainCamera.position = new Vector3(NewPostion.x, MainCamera.position.y, MainCamera.position.z);
     }
 }

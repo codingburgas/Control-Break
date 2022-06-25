@@ -63,9 +63,9 @@ public class CharacterController2D : MonoBehaviour
         if (Input.GetKeyDown(JumpKey) && IsGrounded && CanUse)
             Jump();
 
-        if (Input.GetKeyDown(LeftKey) && !IsFlipped)
+        if (Input.GetKey(LeftKey) && !IsFlipped)
             Flip();
-        if (Input.GetKeyDown(RightKey) && IsFlipped)
+        if (Input.GetKey(RightKey) && IsFlipped)
             Flip();
 
         
