@@ -10,8 +10,6 @@ html {
 }
 
 
-
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,6 +21,7 @@ html {
 /*Make the background color*/
 body {
     background-color: rgb(220, 209, 209);
+    padding: 0;
 }
 
 /*Style the text and the images*/
