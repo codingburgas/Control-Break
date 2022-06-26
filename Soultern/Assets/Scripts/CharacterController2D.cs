@@ -38,7 +38,6 @@ public class CharacterController2D : MonoBehaviour
         Invoke("DisableWakingUp", 2f);
         GetComponent<Animator>().SetBool("IsWakingUp", true);
         GetComponent<CapsuleCollider2D>().size = new Vector2(GetComponent<CapsuleCollider2D>().size.x, 1.0f);
-        transform.position -= new Vector3(0, 0.5f, 0);
     }
 
     void Start()
@@ -149,7 +148,6 @@ public class CharacterController2D : MonoBehaviour
     {
         GetComponent<Animator>().SetBool("IsWakingUp", false);
         GetComponent<CapsuleCollider2D>().size = new Vector2(GetComponent<CapsuleCollider2D>().size.x, 1.509269f);
-        transform.position += new Vector3(0, 0.5f, 0);
     }
 
     IEnumerator DestroyObject(GameObject Object)
