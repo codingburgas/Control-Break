@@ -35,9 +35,9 @@ public class CharacterController2D : MonoBehaviour
 
     void Awake()
     {
-        Invoke("DisableWakingUp", 2f);
+        Invoke("DisableWakingUp", 2.4f);
         GetComponent<Animator>().SetBool("IsWakingUp", true);
-        GetComponent<CapsuleCollider2D>().size = new Vector2(GetComponent<CapsuleCollider2D>().size.x, 1.0f);
+        Invoke("PlayStartingDialogue", 6.125f);
     }
 
     void Start()
@@ -147,7 +147,11 @@ public class CharacterController2D : MonoBehaviour
     void DisableWakingUp()
     {
         GetComponent<Animator>().SetBool("IsWakingUp", false);
-        GetComponent<CapsuleCollider2D>().size = new Vector2(GetComponent<CapsuleCollider2D>().size.x, 1.509269f);
+    }
+
+    void PlayStartingDialogue()
+    {
+        DialogueManager.StartDialogue(new Vector2(1, 5));
     }
 
     IEnumerator DestroyObject(GameObject Object)
