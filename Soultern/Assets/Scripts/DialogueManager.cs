@@ -18,9 +18,10 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector] public List<string> Texts;
 
     private int Current;
+    private bool IsWritingText = false;
 
     [HideInInspector] public bool IsInDialogue = false;
-
+    
     void Start()
     {
         JSONReader = GameObject.Find("JSONReader").GetComponent<JSONReader>();
@@ -42,26 +43,44 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void CheckIfEnded()
+    IEnumerator WriteText()
     {
-        if (Current == Texts.Count)
+        DialogueText.GetComponent<Text>().text = "";
+
+        IsWritingText = true;
+
+        foreach (char i in Texts[Current])
         {
-            DialogueBox.SetActive(false);
-            Time.timeScale = 1f;
+            if (!IsWritingText) break;
 
-            Speakers.Clear();
-            Texts.Clear();
-
-            IsInDialogue = false;
+            DialogueText.GetComponent<Text>().text += i;
+            yield return new WaitForSeconds(0.0425f);
         }
+
+        IsWritingText = false;
     }
 
     public void NextSentence()
     {
-        DialogueName.GetComponent<Text>().text = Speakers[Current];
-        DialogueText.GetComponent<Text>().text = Texts[Current];
+        if (IsWritingText)
+        {
+            DialogueName.GetComponent<Text>().text = Speakers[Current - 1];
+            DialogueText.GetComponent<Text>().text = Texts[Current - 1];
+
+            IsWritingText = false;
+            
+            return;
+        }
+        else
+            DialogueName.GetComponent<Text>().text = Speakers[Current];
+
+
+        StartCoroutine(WriteText());
+
         Current++;
-        CheckIfEnded();
+
+        if (Current == Texts.Count)
+            EndDialogue();
     }
 
     public void StartDialogue(Vector2 DialogueBoundaries)
@@ -75,5 +94,15 @@ public class DialogueManager : MonoBehaviour
 
         Current = 0;
         NextSentence();
+    }
+
+    void EndDialogue()
+    {
+        DialogueBox.SetActive(false);
+
+        Speakers.Clear();
+        Texts.Clear();
+
+        IsInDialogue = false;
     }
 }

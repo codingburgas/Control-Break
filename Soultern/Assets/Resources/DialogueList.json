@@ -3,35 +3,83 @@
     [
         {
             "Speaker": "Ganyo",
-            "Text": "1"
+            "Text": "Ouch... My head hurts sooo bad. What happened with me? What is this place?"
+        },
+        {
+            "Speaker": "Narrator",
+            "Text": "*Ganyos stomach purrs*"
         },
         {
             "Speaker": "Ganyo",
-            "Text": "2"
+            "Text": "I wonder if there's something to eat around here."
+        },
+        {
+            "Speaker": "Narrator",
+            "Text": "*Ganyo sees a house up in the distance*"
         },
         {
             "Speaker": "Ganyo",
-            "Text": "3"
+            "Text": "What is that? Hopefully no one lives there."
+        },
+        {
+            "Speaker": "Narrator",
+            "Text": "*Ganyo finds food*"
         },
         {
             "Speaker": "Ganyo",
-            "Text": "4"
+            "Text": "Oooh, finally some food. This can will do me good for a few nights."
+        },
+        {
+            "Speaker": "Narrator",
+            "Text": "*Ganyo munches*"
+        },
+        {
+            "Speaker": "Narrator",
+            "Text": "*Ganyo is full*"
+        },
+        {
+            "Speaker": "Narrator",
+            "Text": "*The owner of the house walks in*"
+        },
+        {
+            "Speaker": "Lumberjack",
+            "Text": "Hey you, what are you doing in my house?"
         },
         {
             "Speaker": "Ganyo",
-            "Text": "5"
+            "Text": "WOAH? Who are you?"
+        },
+        {
+            "Speaker": "Sevar",
+            "Text": "I am Sevar and I own this house."
         },
         {
             "Speaker": "Ganyo",
-            "Text": "6"
+            "Text": "I'm really sorry. Where am I?"
+        },
+        {
+            "Speaker": "Sevar",
+            "Text": "You're in the Magic Forest of Dalemia."
         },
         {
             "Speaker": "Ganyo",
-            "Text": "7"
+            "Text": "Da- what?"
+        },
+        {
+            "Speaker": "Sevar",
+            "Text": "Dalemia, the biggest of the Seven Kingdoms."
+        },
+        {
+            "Speaker": "Ganyo thinks to himself",
+            "Text": "How did I end up here? I've not even heard about this place. Let's ask him how to get out."
         },
         {
             "Speaker": "Ganyo",
-            "Text": "8"
+            "Text": "I'm really sorry for entering your house. Can you please show me the exit?"
+        },
+        {
+            "Speaker": "Sevar",
+            "Text": "You ain't going anywhere. Hahahahahaha!"
         }
     ]
 }
