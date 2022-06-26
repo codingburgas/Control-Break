@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
-public class MainMenuManager : MonoBehaviour
+public class BackgroundScroller : MonoBehaviour
 {
     private RawImage Background;
 
@@ -12,7 +11,7 @@ public class MainMenuManager : MonoBehaviour
 
     void Start()
     {
-        Background = GameObject.Find("Background").GetComponent<RawImage>();
+        Background = GetComponent<RawImage>();
 
         ScrollSpeed = new Vector2( 0.03f, 0f );
     }
@@ -25,25 +24,5 @@ public class MainMenuManager : MonoBehaviour
     void ScrollBackground()
     {
         Background.uvRect = new Rect(Background.uvRect.position + ScrollSpeed * Time.deltaTime, Background.uvRect.size);
-    }
-
-    public void Continue()
-    {
-        
-    }
-
-    public void NewGame()
-    {
-        SceneManager.LoadScene("Game", LoadSceneMode.Single);
-    }
-
-    public void Settings()
-    {
-
-    }
-
-    public void Quit()
-    {
-        Application.Quit();
     }
 }

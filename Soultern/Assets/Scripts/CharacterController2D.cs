@@ -71,7 +71,6 @@ public class CharacterController2D : MonoBehaviour
             Flip();
         if (Input.GetKey(RightKey) && IsFlipped)
             Flip();
-
         
         if (GetMovement() != 0 && !Footstep.isPlaying && IsGrounded)
             Footstep.Play();
