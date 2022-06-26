@@ -17,6 +17,7 @@ public class DeathManager : MonoBehaviour
 
     [HideInInspector] public bool IsDead;
 
+    private float AnimationTime = 0.0f;
     private float DeathLevel = -9.15f;
 
     void Start()
@@ -35,7 +36,7 @@ public class DeathManager : MonoBehaviour
     {
         if (Player.position.y <= DeathLevel)
         {
-            MenuManager.AnimationTime = 0f;
+            AnimationTime = 0f;
             StatsController.Health = 0;
         }
 
@@ -57,7 +58,7 @@ public class DeathManager : MonoBehaviour
 
     IEnumerator ToggleDeath()
     {
-        yield return new WaitForSeconds(MenuManager.AnimationTime);
+        yield return new WaitForSeconds(AnimationTime);
         if (!IsDead)
             CheckpointManager.Lives--;
         IsDead = true;

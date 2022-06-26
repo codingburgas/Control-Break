@@ -33,6 +33,14 @@ public class CharacterController2D : MonoBehaviour
     private CheckpointManager CheckpointManager;
     private DialogueManager DialogueManager;
 
+    void Awake()
+    {
+        Invoke("DisableWakingUp", 2f);
+        GetComponent<Animator>().SetBool("IsWakingUp", true);
+        GetComponent<CapsuleCollider2D>().size = new Vector2(GetComponent<CapsuleCollider2D>().size.x, 1.0f);
+        transform.position -= new Vector3(0, 0.5f, 0);
+    }
+
     void Start()
     {
         StatsController = GameObject.Find("StatsController").GetComponent<StatsController>();
@@ -48,7 +56,7 @@ public class CharacterController2D : MonoBehaviour
 
     void Update()
     {
-        if (StatsController.Health == 0 || Time.timeScale == 0f || DialogueManager.IsInDialogue)
+        if (StatsController.Health == 0 || Time.timeScale == 0f || DialogueManager.IsInDialogue || GetComponent<Animator>().GetBool("IsWakingUp"))
         {
             Footstep.Stop();
             return;
@@ -137,6 +145,13 @@ public class CharacterController2D : MonoBehaviour
         TakeDamage = false;
     }
 
+    void DisableWakingUp()
+    {
+        GetComponent<Animator>().SetBool("IsWakingUp", false);
+        GetComponent<CapsuleCollider2D>().size = new Vector2(GetComponent<CapsuleCollider2D>().size.x, 1.509269f);
+        transform.position += new Vector3(0, 0.5f, 0);
+    }
+
     IEnumerator DestroyObject(GameObject Object)
     {
         yield return new WaitForSeconds(2f);
@@ -186,7 +201,7 @@ public class CharacterController2D : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if (other.CompareTag("Spikes") && !TakeDamage)
+        if (other.CompareTag("Spikes"))
         {
             StatsController.Health = 0;
         }

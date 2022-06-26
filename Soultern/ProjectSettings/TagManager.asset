@@ -11,6 +11,7 @@ TagManager:
   - Health
   - Spikes
   - Music
+  - CheckpointManager
   layers:
   - Default
   - TransparentFX

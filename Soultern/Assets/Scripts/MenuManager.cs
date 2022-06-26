@@ -19,8 +19,6 @@ public class MenuManager : MonoBehaviour
     [HideInInspector] public bool IsGameOver;
     [HideInInspector] public bool IsPaused;
 
-    [HideInInspector] public float AnimationTime;
-
     void Start()
     {
         if (SceneManager.GetActiveScene().name != "Game") return;
@@ -33,12 +31,6 @@ public class MenuManager : MonoBehaviour
         GameOverMenu = ExtraFunctions.FindInactive("Game Over Menu");
         PauseMenu = ExtraFunctions.FindInactive("Pause Menu");
         StaminaBar = GameObject.Find("Stamina Bar");
-
-        YouDied = false;
-        IsGameOver = false;
-        IsPaused = false;
-
-        AnimationTime = 2.0f;
     }
 
     void Update()
@@ -60,6 +52,7 @@ public class MenuManager : MonoBehaviour
         YouDiedMenu.SetActive(!YouDied);
         StaminaBar.SetActive(YouDied);
         Time.timeScale = System.Convert.ToSingle(YouDied);
+        ToggleDialogueBox(YouDied);
         YouDied = !YouDied;
         PauseMusic();
     }
@@ -69,6 +62,7 @@ public class MenuManager : MonoBehaviour
         GameOverMenu.SetActive(!IsGameOver);
         StaminaBar.SetActive(IsGameOver);
         Time.timeScale = System.Convert.ToSingle(IsGameOver);
+        ToggleDialogueBox(IsGameOver);
         IsGameOver = !IsGameOver;
         PauseMusic();
     }
@@ -78,6 +72,7 @@ public class MenuManager : MonoBehaviour
         PauseMenu.SetActive(!IsPaused);
         StaminaBar.SetActive(IsPaused);
         Time.timeScale = System.Convert.ToSingle(IsPaused);
+        ToggleDialogueBox(IsPaused);
         IsPaused = !IsPaused;
         PauseMusic();
     }
@@ -89,6 +84,20 @@ public class MenuManager : MonoBehaviour
             Music.Pause();
         else
             Music.Play();
+    }
+
+    void ToggleDialogueBox(bool State)
+    {
+        GameObject DialogueBox = ExtraFunctions.FindInactive("Dialogue Box");
+        if (DialogueBox.activeSelf)
+            DialogueBox.SetActive(State);
+    }
+
+    // Difficulty
+
+    public void SaveDifficulty()
+    {
+        PlayerPrefs.SetInt("Difficulty", GameObject.Find("Difficulty").GetComponent<Dropdown>().value);
     }
 
     // Main Menu
@@ -110,7 +119,6 @@ public class MenuManager : MonoBehaviour
 
     public void NewGame()
     {
-        PlayerPrefs.SetInt("Difficulty", GameObject.Find("Difficulty").GetComponent<Dropdown>().value);
         SceneManager.LoadScene("Game", LoadSceneMode.Single);
     }
 

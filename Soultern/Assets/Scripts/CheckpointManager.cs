@@ -9,24 +9,35 @@ public class CheckpointManager : MonoBehaviour
     [HideInInspector] public Vector3 StartingCheckpoint;
     [HideInInspector] public Vector3 LatestCheckpoint;
 
+    public int Difficulty;
+
     [HideInInspector] public int MaxLives;
     [HideInInspector] public int Lives;
 
     void Awake()
     {
-        if (Object.FindObjectOfType<CheckpointManager>() != this)
+        GameObject[] Objects = GameObject.FindGameObjectsWithTag("CheckpointManager");
+ 
+        bool NotFirst = false;
+
+        foreach (GameObject oneOther in Objects)
+            if (oneOther.scene.buildIndex == -1)
+                NotFirst = true;
+
+        if (NotFirst == true)
             Destroy(gameObject);
         
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(transform.gameObject);
 
-        Player = GameObject.Find("Player").transform;
-        
-        StartingCheckpoint = Player.transform.position;
+        Difficulty = PlayerPrefs.GetInt("Difficulty");
     }
 
     void Start()
     {
-        switch (PlayerPrefs.GetInt("Difficulty"))
+        Player = GameObject.Find("Player").transform;
+        Difficulty = PlayerPrefs.GetInt("Difficulty");
+
+        switch (Difficulty)
         {
             case 0:
                 MaxLives = 5;
