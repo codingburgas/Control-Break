@@ -24,18 +24,6 @@
 
 <h1>🎬Trailer</h1>
 <h3><big> Hey, we made a trailer specially for you! Check it out: <a href="">Trailer</big></h3>
-  
-  
-<h1>🏆 The Team</h1>
-<h3><big><a href="https://github.com/SSUzunov19">Stas Uzunov</a>  - Scrum Trainer</big></h3>
-<h3><big><a href="https://github.com/DZGeorgiev19">Daniel Georgiev</a>  - Scrum Trainer/Designer</big></h3>
-<h3><big><a href="https://github.com/TNKompanska19">Teodora Kompanska</a>  - Scrum Trainer/Designer</big></h3>
-<h3><big><a href="https://github.com/YSStoyanov20">Yordan Stoyanov</a> - Front-end Developer</big></h3>
-<h3><big><a href="https://github.com/PDMatsaliev20">Petar Matsaliev</a> - Front-end Developer</big></h3>
-<h3><big><a href="https://github.com/GGGeorgiev20">Galin Georgiev</a> - Back-end Developer</big></h3>
-<h3><big><a href="https://github.com/NTIvanova21">Nadezhda Ivanova</a> - Web Developer</big></h3>
-<h3><big><a href="https://github.com/DKGeorgiev21">Dimitar Georgiev</a> - Web Developer</big></h3>
-
 
 <h1>📄 Documentation</h1>
 <h3> ➤ <a href="https://github.com/codingburgas/Control-Break/blob/main/Documentation/Documentation.docx">Documentation</a><img src="https://cdn.worldvectorlogo.com/logos/word-1.svg" alt="Word" width="30" height="20"/> </h3>
@@ -58,6 +46,16 @@
   <h3><img src="https://cdn.worldvectorlogo.com/logos/word-1.svg" alt="Word" width="30" height="20"> MS Word - Documentation</h3>
   <h3><img src="https://cdn.worldvectorlogo.com/logos/powerpoint-2.svg" alt="PowerPoint" width="30" height="20"> MS PowerPoint - Presentation</h3>
   
+<h1 align="">🏆 The Team</h1>
+<h3 align=""><big><a href="https://github.com/SSUzunov19">Stas Uzunov</a>  - Scrum Trainer</big></h3>
+<h3 align=""><big><a href="https://github.com/DZGeorgiev19">Daniel Georgiev</a>  - Scrum Trainer/Designer</big></h3>
+<h3 align=""><big><a href="https://github.com/TNKompanska19">Teodora Kompanska</a>  - Scrum Trainer/Designer</big></h3>
+<h3 align=""><big><a href="https://github.com/YSStoyanov20">Yordan Stoyanov</a> - Front-end Developer</big></h3>
+<h3 align=""><big><a href="https://github.com/PDMatsaliev20">Petar Matsaliev</a> - Front-end Developer</big></h3>
+<h3 align=""><big><a href="https://github.com/GGGeorgiev20">Galin Georgiev</a> - Back-end Developer</big></h3>
+<h3 align=""><big><a href="https://github.com/NTIvanova21">Nadezhda Ivanova</a> - Web Developer</big></h3>
+<h3 align=""><big><a href="https://github.com/DKGeorgiev21">Dimitar Georgiev</a> - Web Developer</big></h3>
+
   <hr>
   
-  <h1 align="Center">You can support us by giving a ⭐ to our repository!</h1>
+  <h1 align="Center">You can support us by giving a ⭐ to our repository!<br>Made with ❤️ by team Control Break!</h1>
