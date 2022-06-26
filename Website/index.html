@@ -19,10 +19,12 @@
   <link href="styles/Pages/About_us.css" rel="stylesheet" type="text/css" />
   <link href="styles/Pages/Github_page.css" rel="stylesheet" type="text/css" />
   <link href="styles/Pages/trailer_page.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+  <script src="js/main.js"></script>
 </head>
 
 <body>
-  <!--------------------------------------------------NAVBAR-------------------------------------------------------------------------------->
+<!--------------------------------------------------NAVBAR-------------------------------------------------------------------------------->
   <navbar class="navbar navbar-expand-md fixed-top navbar-light font-weight-bold">
     <div class="container-fluid">
       <!--Add logo and linked it to the first page-->
@@ -53,7 +55,7 @@
 
 
 
-  <!-------------------------------------------------FIRST_PAGE---------------------------------------------------------------->
+<!-------------------------------------------------FIRST_PAGE---------------------------------------------------------------->
   <!--Add the main page-->
   <main id="home_page" class="main-homepage">
     <div class="tilt-conainer">
@@ -78,12 +80,12 @@
     </div>
   </main>
 
-  <!------------------------------------------------DIVIDER------------------------------------------------------------------------------------>
+<!------------------------------------------------DIVIDER------------------------------------------------------------------------------------>
 
   <!--Add divider between the pages-->
   <div class="grass-separator"></div>
 
-  <!------------------------------------------------SECOND_PAGE------------------------------------------------------------------------------------->
+<!------------------------------------------------SECOND_PAGE------------------------------------------------------------------------------------->
   <!--Add page with the plot if the game and its poster-->
   <section id="features" class="features">
     <div class="container  text-center">
@@ -109,13 +111,13 @@
       </div>
     </div>
 </section>
-    <!------------------------------------------------DIVIDER----------------------------------------------------------------------->
+<!------------------------------------------------DIVIDER----------------------------------------------------------------------->
     <!--Add divider between the pages-->
     <div class="section" id="four" style="width:100%">
       <object id="Explore" data="images/seperators_and_others/branches3.svg" width="100%" height="1%"> </object>
     </div>
 
-    <!------------------------------------------------THIRD_PAGE----------------------------------------------------------------------------------------->
+<!------------------------------------------------THIRD_PAGE----------------------------------------------------------------------------------------->
     <!--Add text of the game's different levels -->
     <div class="container mt-4 text-center " id="section2">
       <h1>Explore some of the Soultern's levels</h1>
@@ -144,12 +146,12 @@
 
       </div>
     </div>
-    <!------------------------------------------------DIVIDER----------------------------------------------------------------------------------------------->
+<!------------------------------------------------DIVIDER----------------------------------------------------------------------------------------------->
     <!--Add divider between the pages-->
     <div class="section" id="four" style="width:100%">
       <object data="images/seperators_and_others/branches3.svg" width="100%" height="10%"> </object>
     </div>
-    <!------------------------------------------------FOURTH_PAGE------------------------------------------------------------------------------------------->
+<!------------------------------------------------FOURTH_PAGE------------------------------------------------------------------------------------------->
 
     <section class="features">
       <div class="container  text-center">
@@ -165,11 +167,12 @@
                   <h1>Soultern's trailer</h1>
                 </div>
                 <!--Add the video-->
-                <div><iframe src="https://www.youtube.com/embed/tpP8Zr_xtKM" title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe></div>
+                <div><video controls>
+                      <source src="images/videos/Soultern - Trailer 2.mp4" type="video/mp4">
+                    </div>
+                    </video>
               </div>
+
             </div>
 
           </div>
@@ -178,12 +181,12 @@
     </section>
 
 
-    <!------------------------------------------------DIVIDER----------------------------------------------------------------------------------------------->
+<!------------------------------------------------DIVIDER----------------------------------------------------------------------------------------------->
     <!--Add divider between the pages-->
     <div class="section" id="four" style="width:100%">
       <object data="images/seperators_and_others/branches3.svg" width="100%" height="10%"> </object>
     </div>
-    <!------------------------------------------------FIFTH_PAGE------------------------------------------------------------------------------------------->
+<!------------------------------------------------FIFTH_PAGE------------------------------------------------------------------------------------------->
 
     <section id="forth_page" class="features">
       <div class="container  text-center">
@@ -212,10 +215,10 @@
     </section>
 
 
-      <!------------------------------------------------DIVIDER----------------------------------------------------------------------------------------------->
+<!------------------------------------------------DIVIDER----------------------------------------------------------------------------------------------->
       <!--Add divider between the pages-->
       <div class="forest-separator"></div>
-      <!------------------------------------------------SIXTH_PAGE----------------------------------------------------------------->
+<!------------------------------------------------SIXTH_PAGE----------------------------------------------------------------->
       <!--Add information about us and the game-->
       <div class="team4" id="About_us">
         <div class="container">
@@ -371,12 +374,12 @@
 
           </div>
         </div>
-        <!-----------------------------------------------DIVIDER------------------------------------------------------------------------------------>
+<!-----------------------------------------------DIVIDER------------------------------------------------------------------------------------>
 
         <!--Add divider between the pages-->
         <div class="footer-separator"></div>
 
-        <!-----------------------------------------------FOOTER----------------------------------------------------------------------------------->
+<!-----------------------------------------------FOOTER----------------------------------------------------------------------------------->
         <!-- Footer -->
         <footer class="page-footer font-small stylish-color-dark pt-4">
 
@@ -441,8 +444,8 @@
                 <!--Add a contact us email-->
                 <ul class="list-unstyled">
                   <li>
-                    <a href="mailto: Soultern@codingburgas.bg"
-                      style="color:rgb(98, 148, 190); font-size: 15pt;">Soultern@codingburgas.bg</a>
+                    <a href="mailto: ControlBreakGame@gmail.com"
+                      style="color:rgb(98, 148, 190); font-size: 15pt;">ControlBreakGame@gmail.com</a>
                   </li>
                 </ul>
 
@@ -453,22 +456,35 @@
           </div>
 
           <!-- Copyright -->
-          <div class="footer-copyright text-center ">© 2022 Soultern
-            <a style=" color:rgb(98, 148, 190); " href="index.html"> Soultern.codingburgas.org</a>
+          <div class="footer-copyright text-center ">© 2022 ControlBreakGame
+            <a style=" color:rgb(98, 148, 190); " href="index.html">ControlBreakGame@gmail.com</a>
           </div>
 
-
-          <button onclick="topFunction()" id="top-button"
-          class="back-to-top d-flex align-items-center justify-content-center" ><img
-            src="images/seperators_and_others/up-arrow.png"  id="pointer">
-          </button>
+          <!--Add back to top button-->
+          <a href="#" class="to-top">
+            <i ><img src="images/seperators_and_others/up-arrow.png"  id="pointer"></i>
+          </a>
         </footer>
 
       </div>
+      
 
-      <!--Add back to top button-->
+      
 
-      <!------------------------------------------------SCRIPTS------------------------------------------------------------------------------------>
+<!------------------------------------------------SCRIPTS------------------------------------------------------------------------------------>
+      <script>
+        
+        const toTop = document.querySelector(".to-top");
+
+        window.addEventListener("scroll", () => {
+          if (window.pageYOffset > 100) {
+            toTop.classList.add("active");
+          } else {
+            toTop.classList.remove("active");
+          }
+        })
+      </script>
+      
       <!--Add java script sheets-->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -482,7 +498,7 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
-      <script src="js/main.js"></script>
+      
       <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
 

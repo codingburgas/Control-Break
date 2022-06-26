@@ -1,28 +1,37 @@
 /*Style the back to top button*/
-#top-button {
-    bottom:10px;
-    position:static;
-    margin-left:96%;
-    right: 15px; 
-    z-index: 9999;
-    border: none;
-    outline: none;
-    background-color: rgba(225,225,225,0);
-    color: white;
-    background-color:rgb(15, 68, 110) ;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 90px;
-    transition: all ease 0.5s;
-  }
+.to-top {
+  background: rgb(15, 68, 110);
+  position: fixed;
+  bottom: 16px;
+  right:32px;
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:32px;
+  color:#fff;
+  text-decoration: none;
+  opacity:0;
+  pointer-events: none;
+  transition: all .4s;
+}
+.to-top.active {
+  bottom:32px;
+  pointer-events: auto;
+  opacity:1;
+}
 /*Change background color when you go on it with the cursor*/ 
-#top-button:hover {
+.to-top:hover {
   background-color: rgb(46, 97, 151) ;
 }
 #pointer{
     margin: 0;
-    padding: 0;
+    padding-bottom: 4px;
     width: 15px; 
     height: 15px;
 }
  
+
+
