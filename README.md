@@ -30,7 +30,7 @@
 <h3> ➤ <a href="https://github.com/codingburgas/Control-Break/blob/main/Documentation/Presentation.pptx">Presentation </a><img src="https://cdn.worldvectorlogo.com/logos/powerpoint-2.svg" alt="PowerPoint" width="30" height="20"/> </h3>
  
 <h1><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png" alt="YT"  width="30" height="20"> Youtube</h1>
-  <h3><big>You can check out our Youtube page here: <a href=" ">Channel</big></h3>
+  <h3><big>You can check out our Youtube page here: <a href="https://www.youtube.com/channel/UClcG1nlO3rYVckY_jE0Y80w/featured">Channel</big></h3>
 <h1>📥 Download</h1>
   <h3><a href="Soultern/Game.exe">Download Soultern</a></h3>
 
