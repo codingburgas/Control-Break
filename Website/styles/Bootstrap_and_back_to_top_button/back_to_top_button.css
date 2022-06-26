@@ -1,7 +1,7 @@
 /*Style the back to top button*/
-#back-to-top {
+#top-button {
     bottom:10px;
-    position:sticky;
+    position:static;
     margin-left:96%;
     right: 15px; 
     z-index: 9999;
@@ -16,7 +16,7 @@
     transition: all ease 0.5s;
   }
 /*Change background color when you go on it with the cursor*/ 
-#back-to-top:hover {
+#top-button:hover {
   background-color: rgb(46, 97, 151) ;
 }
 #pointer{
