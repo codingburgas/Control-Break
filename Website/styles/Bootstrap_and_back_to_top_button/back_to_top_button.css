@@ -1,9 +1,6 @@
 /*Style the back to top button*/
 #back-to-top {
-   
-
-    bottom: 10px;
-    z-index: 9999;
+    bottom:10px;
     position:sticky;
     margin-left:96%;
     right: 15px; 
@@ -25,7 +22,7 @@
 #pointer{
     margin: 0;
     padding: 0;
-    width: 1px; 
-    height: 1px;
+    width: 15px; 
+    height: 15px;
 }
  
