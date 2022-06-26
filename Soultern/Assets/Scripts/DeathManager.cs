@@ -51,7 +51,7 @@ public class DeathManager : MonoBehaviour
     public void Revive()
     {
         if (CheckpointManager.Lives == 0)
-            CheckpointManager.Lives = 3;
+            CheckpointManager.Lives = CheckpointManager.MaxLives;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

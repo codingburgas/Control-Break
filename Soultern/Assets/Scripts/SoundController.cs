@@ -16,8 +16,8 @@ public class SoundController : MonoBehaviour
 
     void Start()
     {
-        MasterVolumeValue = PlayerPrefs.GetFloat("Master Volume", 100);
-        MusicVolumeValue = PlayerPrefs.GetFloat("Music Volume", 100);
+        MasterVolumeValue = PlayerPrefs.GetFloat("Master Volume");
+        MusicVolumeValue = PlayerPrefs.GetFloat("Music Volume");
 
         if (SceneManager.GetActiveScene().name == "Game") return;
 

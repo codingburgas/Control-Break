@@ -6,14 +6,11 @@ public class CheckpointManager : MonoBehaviour
 {
     private Transform Player;
 
-    private CharacterController2D CharacterController;
-    private CameraController2D CameraController;
-    private DeathManager DeathManager;
-
     [HideInInspector] public Vector3 StartingCheckpoint;
     [HideInInspector] public Vector3 LatestCheckpoint;
 
-    [HideInInspector] public int Lives = 3;
+    [HideInInspector] public int MaxLives;
+    [HideInInspector] public int Lives;
 
     void Awake()
     {
@@ -24,11 +21,26 @@ public class CheckpointManager : MonoBehaviour
 
         Player = GameObject.Find("Player").transform;
         
-        StartingCheckpoint = Player.transform.position; //new Vector3(-193.27f, 0f, 0f)
+        StartingCheckpoint = Player.transform.position;
     }
 
     void Start()
     {
+        switch (PlayerPrefs.GetInt("Difficulty"))
+        {
+            case 0:
+                MaxLives = 5;
+                break;
+            case 1:
+                MaxLives = 3;
+                break;
+            case 2:
+                MaxLives = 1;
+                break;
+        }
+
+        Lives = MaxLives;
+
         LatestCheckpoint = Player.position;
     }
 }

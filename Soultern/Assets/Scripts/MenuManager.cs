@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
@@ -102,8 +103,14 @@ public class MenuManager : MonoBehaviour
         
     }
 
+    public void Difficulty()
+    {
+        SceneManager.LoadScene("Difficulty", LoadSceneMode.Single);
+    }
+
     public void NewGame()
     {
+        PlayerPrefs.SetInt("Difficulty", GameObject.Find("Difficulty").GetComponent<Dropdown>().value);
         SceneManager.LoadScene("Game", LoadSceneMode.Single);
     }
 
