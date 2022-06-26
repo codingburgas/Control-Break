@@ -31,11 +31,13 @@ public class CharacterController2D : MonoBehaviour
 
     private StatsController StatsController;
     private CheckpointManager CheckpointManager;
+    private DialogueManager DialogueManager;
 
     void Start()
     {
         StatsController = GameObject.Find("StatsController").GetComponent<StatsController>();
         CheckpointManager = GameObject.Find("CheckpointManager").GetComponent<CheckpointManager>();
+        DialogueManager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
 
         Footstep = GetComponent<AudioSource>();
 
@@ -46,7 +48,7 @@ public class CharacterController2D : MonoBehaviour
 
     void Update()
     {
-        if (StatsController.Health == 0 || Time.timeScale == 0f)
+        if (StatsController.Health == 0 || Time.timeScale == 0f || DialogueManager.IsInDialogue)
         {
             Footstep.Stop();
             return;

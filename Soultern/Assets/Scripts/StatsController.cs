@@ -6,6 +6,7 @@ public class StatsController : MonoBehaviour
 {
     private CharacterController2D CharacterController;
     private ExtraFunctions ExtraFunctions;
+    private DialogueManager DialogueManager;
 
     private string Player = "Player";
 
@@ -22,6 +23,7 @@ public class StatsController : MonoBehaviour
     {
         CharacterController = GameObject.Find(Player).GetComponent<CharacterController2D>();
         ExtraFunctions = GameObject.Find("ExtraFunctions").GetComponent<ExtraFunctions>();
+        DialogueManager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
 
         Health = HealthMax;
         Stamina = StaminaMax;
@@ -39,7 +41,7 @@ public class StatsController : MonoBehaviour
         CharacterController.CanUse = Stamina > 0;
         CharacterController.CanJump = Stamina > JumpDrain;
 
-        if (Input.GetKey(CharacterController.SprintKey))
+        if (Input.GetKey(CharacterController.SprintKey) && !DialogueManager.IsInDialogue)
         {
             if (CharacterController.CanUse)
                 StartCoroutine(DrainStamina());
@@ -52,7 +54,7 @@ public class StatsController : MonoBehaviour
     
     void Update()
     {
-        if (Health == 0 || Time.timeScale == 0f) return;
+        if (Health == 0 || Time.timeScale == 0f || DialogueManager.IsInDialogue) return;
 
         if (Input.GetKeyDown(CharacterController.JumpKey) && CharacterController.CanJump)
         {

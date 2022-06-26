@@ -13,6 +13,7 @@ public class AnimationController : MonoBehaviour
     private CharacterController2D CharacterController;
     private WoodsmanController WoodsmanController;
     private StatsController StatsController;
+    private DialogueManager DialogueManager;
 
     void Start()
     {
@@ -25,11 +26,13 @@ public class AnimationController : MonoBehaviour
         CharacterController = Player.GetComponent<CharacterController2D>();
         // WoodsmanController = Woodsman.GetComponent<WoodsmanController>();
         StatsController = GameObject.Find("StatsController").GetComponent<StatsController>();
+        DialogueManager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
     }
 
     void Update()
     {
-        PlayerAnimator.SetBool("IsWalking", CharacterController.IsWalking);
+
+        PlayerAnimator.SetBool("IsWalking", CharacterController.IsWalking && !DialogueManager.IsInDialogue);
         PlayerAnimator.SetFloat("VelocityY", CharacterController.GetVelocity().y);
         PlayerAnimator.SetBool("TakenDamage", CharacterController.TakeDamage);
         PlayerAnimator.SetBool("IsDead", StatsController.Health == 0);
