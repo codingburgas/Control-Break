@@ -47,8 +47,6 @@
     font-size: 1em;
 }
 
-
-
 .forest-separator
 {
     background: url(../../images/seperators_and_others/sep-forest-1.png);
@@ -57,3 +55,10 @@
     height: 60vh;
 }
 
+.footer-separator
+{
+    background: url(../../images/seperators_and_others/sep-forest-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+}

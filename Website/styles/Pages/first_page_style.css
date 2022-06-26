@@ -108,7 +108,7 @@
     transition: background-color 0.4s ease-in-out;
   }
   #finance-btn:hover{
-    background-color: rgb(106, 100, 100);
+    background-color: #063718;
   }
 
 /*Style the explore button*/
@@ -125,7 +125,7 @@
   
 
   #refer-btn:hover{
-    background-color:  rgb(106, 100, 100);
+    background-color:  #0C1122;
   }
 
 

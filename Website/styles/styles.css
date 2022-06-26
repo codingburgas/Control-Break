@@ -5,43 +5,45 @@
 
 /*Make the scrolling up smoother*/
 
-  html {
+html {
     scroll-behavior: smooth;
-  }
+}
 
 
 
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: rgba(225,225,225,0);
+    background-color: rgba(225, 225, 225, 0);
 }
 
 /*Make the background color*/
-body{
-  background-color: rgb(220, 209, 209);
+body {
+    background-color: rgb(220, 209, 209);
 }
 
 /*Style the text and the images*/
-p{
+p {
     font-size: 1.25rem;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
 
-img{
+img {
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
-h1{
+
+h1 {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     margin: 0;
 }
-h2{
+
+h2 {
     text-align: center;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -49,17 +51,25 @@ h2{
     font-size: 2.5rem;
 }
 
-h4{
+h4 {
     margin-top: 0px;
 }
 
+footer {
+    background-color: #020715;
+}
 
+.bottom-space {
+    height: 10vh;
+    background-color: #020715;
+}
 
 /*Style the poster of the second page*/
-.poster{
-    vertical-align:-21rem;
+.poster {
+    vertical-align: -21rem;
     border-radius: 8px;
 }
+
 /*Style the levels' images*/
 .section-image {
     display: inline-block;
@@ -68,12 +78,14 @@ h4{
     background: #777;
     background-position: center center;
     background-size: cover;
-    box-shadow: 0 0 6px rgba(77,77,77,.5);
+    box-shadow: 0 0 6px rgba(77, 77, 77, .5);
+    border-radius: 0.75em;
     margin-bottom: 2rem;
 }
+
 .img-inline {
     width: 100%;
-    box-shadow: 0 0 6px rgba(77,77,77,.5);
+    box-shadow: 0 0 6px rgba(77, 77, 77, .5);
 }
 
 
@@ -86,9 +98,10 @@ h4{
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-    text-align:center;
+    text-align: center;
 
 }
+
 #row {
     display: -ms-flexbox;
     display: flex;
@@ -96,36 +109,39 @@ h4{
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-    text-align:center;
+    text-align: center;
     align-items: baseline;
 }
+
 /*Style the third page grid*/
-#section2{
-    margin-top:0 ;
+#section2 {
+    margin-top: 0;
     margin-bottom: 0;
 }
 
 /*Make and style the container and the text in it about the game*/
-#container_about_our_game{
-
+#container_about_our_game {
     width: 100%;
-    height: 4%;
+    height: auto;
     margin-top: 4rem;
     margin-bottom: 2rem;
     margin-left: 10%;
     margin-right: 10%;
-    background-color:rgb(45, 119, 129) ;
-    border: 5px solid rgb(11, 54, 89);
-    border-radius: 30px;
+    background-color: hsla(225, 9%, 27%, 0.1);
+    box-shadow: 0 0.5em 2em 0 rgba(3, 3, 6, 0.5);
+    backdrop-filter: blur(0.5em);
+    -webkit-backdrop-filter: blur(0.5em);
+    border: none;
+    border-radius: 1.5em;
     align-items: baseline;
 }
 
-#text_about_our_game{
+#text_about_our_game {
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     margin: 3rem;
-    color: white;   
+    color: white;
 }
 
 
@@ -139,30 +155,32 @@ h4{
     width: 100%;
 }
 
-#four  {
-    padding-bottom:0;
+#four {
+    padding-bottom: 0;
 }
+
 .featurette-divider {
     margin: 3rem 0;
-  }
+}
 
 
 /*-------------------------------------------*/
 
 @media (min-width:1200px) {
-    .container{
-        max-width:1200px;
-    }
-}
-@media (min-width:990px){
-    .col-md-4 {
-        max-width: 1999px ;
+    .container {
+        max-width: 1200px;
     }
 }
 
-@media (min-width:990px){
+@media (min-width:990px) {
+    .col-md-4 {
+        max-width: 1999px;
+    }
+}
+
+@media (min-width:990px) {
     .col-md-3 {
-        max-width: 1999px ;
+        max-width: 1999px;
     }
 }
 
