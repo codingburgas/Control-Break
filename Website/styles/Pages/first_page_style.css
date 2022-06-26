@@ -35,7 +35,14 @@
     filter: brightness(100%);
   }
   
-  
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  a:hover{
+    text-decoration: none;
+    color: white;
+  }
   
   
   @media only screen and (min-width: 1245px) {
