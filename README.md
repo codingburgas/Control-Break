@@ -21,6 +21,10 @@
 
 <h1>🪓 Plot</h1>
 <h3> <big>  It's been a tough night in one of your friends's house. On the way home, a tree branch falls and hits you. You faint and fall.  Later, waking up, you realise, you're somewhere you've never been before. Meet new friends, defeat vicious enemies, explore uncharted lands. Your objective is simple: Find the way home. </h3>
+
+<h1>🎬Trailer</h1>
+<h3><big> Hey, we made a trailer specially for you! Check it out: <a href="">Trailer</big></h3>
+  
   
 <h1>🏆 The Team</h1>
 <h3><big><a href="https://github.com/SSUzunov19">Stas Uzunov</a>  - Scrum Trainer</big></h3>
@@ -37,6 +41,8 @@
 <h3> ➤ <a href="https://github.com/codingburgas/Control-Break/blob/main/Documentation/Documentation.docx">Documentation</a><img src="https://cdn.worldvectorlogo.com/logos/word-1.svg" alt="Word" width="30" height="20"/> </h3>
 <h3> ➤ <a href="https://github.com/codingburgas/Control-Break/blob/main/Documentation/Presentation.pptx">Presentation </a><img src="https://cdn.worldvectorlogo.com/logos/powerpoint-2.svg" alt="PowerPoint" width="30" height="20"/> </h3>
  
+<h1><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png" alt="YT"  width="30" height="20"> Youtube</h1>
+  <h3><big>You can check out our Youtube page here: <a href=" ">Channel</big></h3>
 <h1>📥 Download</h1>
   <h3><a href="">Download Soultern</a></h3>
 
