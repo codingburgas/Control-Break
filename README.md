@@ -57,3 +57,7 @@
   <h3><img src="https://img.icons8.com/color/344/css3.png" alt="CSS logo" width="30" height="30" /> CSS - Web styling</a>
   <h3><img src="https://cdn.worldvectorlogo.com/logos/word-1.svg" alt="Word" width="30" height="20"> MS Word - Documentation</h3>
   <h3><img src="https://cdn.worldvectorlogo.com/logos/powerpoint-2.svg" alt="PowerPoint" width="30" height="20"> MS PowerPoint - Presentation</h3>
+  
+  <hr>
+  
+  <h1 align="Center">You can support us by giving a ⭐ to our repository!</h1>
