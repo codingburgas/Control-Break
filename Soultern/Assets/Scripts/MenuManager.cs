@@ -75,6 +75,7 @@ public class MenuManager : MonoBehaviour
         ToggleDialogueBox(IsPaused);
         IsPaused = !IsPaused;
         PauseMusic();
+        
     }
 
     void PauseMusic()
@@ -107,11 +108,6 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("Main Menu", LoadSceneMode.Single);
     }
 
-    public void Continue()
-    {
-        
-    }
-
     public void Difficulty()
     {
         SceneManager.LoadScene("Difficulty", LoadSceneMode.Single);
@@ -130,5 +126,10 @@ public class MenuManager : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits", LoadSceneMode.Single);
     }
 }

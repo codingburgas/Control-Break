@@ -9,7 +9,7 @@ public class CheckpointManager : MonoBehaviour
     [HideInInspector] public Vector3 StartingCheckpoint;
     [HideInInspector] public Vector3 LatestCheckpoint;
 
-    public int Difficulty;
+    [HideInInspector] public int Difficulty = 5;
 
     [HideInInspector] public int MaxLives;
     [HideInInspector] public int Lives;
@@ -30,11 +30,14 @@ public class CheckpointManager : MonoBehaviour
         DontDestroyOnLoad(transform.gameObject);
 
         Difficulty = PlayerPrefs.GetInt("Difficulty");
+
+        Player = GameObject.Find("Player").transform;
+
+        StartingCheckpoint = Player.position;
     }
 
     void Start()
     {
-        Player = GameObject.Find("Player").transform;
         Difficulty = PlayerPrefs.GetInt("Difficulty");
 
         switch (Difficulty)
@@ -47,6 +50,9 @@ public class CheckpointManager : MonoBehaviour
                 break;
             case 2:
                 MaxLives = 1;
+                break;
+            default:
+                MaxLives = 30;
                 break;
         }
 

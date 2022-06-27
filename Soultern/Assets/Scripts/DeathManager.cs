@@ -8,6 +8,7 @@ public class DeathManager : MonoBehaviour
 {
     private StatsController StatsController;
     private CheckpointManager CheckpointManager;
+    private CharacterController2D CharacterController;
     private MenuManager MenuManager;
     private ExtraFunctions ExtraFunctions;
 
@@ -23,6 +24,7 @@ public class DeathManager : MonoBehaviour
     {
         StatsController = GameObject.Find("StatsController").GetComponent<StatsController>();
         CheckpointManager = GameObject.Find("CheckpointManager").GetComponent<CheckpointManager>();
+        CharacterController = GameObject.Find("Player").GetComponent<CharacterController2D>();
         MenuManager = GameObject.Find("MenuManager").GetComponent<MenuManager>();
         ExtraFunctions = GameObject.Find("ExtraFunctions").GetComponent<ExtraFunctions>();
 
@@ -50,6 +52,7 @@ public class DeathManager : MonoBehaviour
         if (CheckpointManager.Lives == 0)
             CheckpointManager.Lives = CheckpointManager.MaxLives;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        CharacterController.Invoke("PlayStartingDialogue", 6.125f);
     }
 
     void ToggleDeath()

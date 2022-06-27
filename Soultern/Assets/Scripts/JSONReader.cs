@@ -39,7 +39,7 @@ public class JSONReader : MonoBehaviour
         }
 
         for (int i = 0; i < 2; i++)
-            Result.Add("IfThisIsntHereItDoesntWorkSo");
+            Result.Add("IfThisShowsUpSomethingIsWrong");
         
         return Result;
     }

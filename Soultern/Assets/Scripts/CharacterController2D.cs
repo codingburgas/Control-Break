@@ -31,20 +31,24 @@ public class CharacterController2D : MonoBehaviour
 
     private StatsController StatsController;
     private CheckpointManager CheckpointManager;
+    private MenuManager MenuManager;
     private DialogueManager DialogueManager;
 
     void Awake()
     {
-        Invoke("DisableWakingUp", 2.4f);
+        Invoke("DisableWakingUp", 4f);
         GetComponent<Animator>().SetBool("IsWakingUp", true);
-        Invoke("PlayStartingDialogue", 6.125f);
     }
 
     void Start()
     {
         StatsController = GameObject.Find("StatsController").GetComponent<StatsController>();
         CheckpointManager = GameObject.Find("CheckpointManager").GetComponent<CheckpointManager>();
+        MenuManager = GameObject.Find("MenuManager").GetComponent<MenuManager>();
         DialogueManager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
+
+        if (CheckpointManager.Lives == CheckpointManager.MaxLives)
+            Invoke("PlayStartingDialogue", 6.125f);
 
         Footstep = GetComponent<AudioSource>();
 
@@ -151,7 +155,7 @@ public class CharacterController2D : MonoBehaviour
 
     void PlayStartingDialogue()
     {
-        DialogueManager.StartDialogue(new Vector2(1, 5));
+        DialogueManager.StartDialogue(new Vector2(1, 2));
     }
 
     IEnumerator DestroyObject(GameObject Object)
@@ -167,6 +171,7 @@ public class CharacterController2D : MonoBehaviour
         if (other.CompareTag("Checkpoint"))
         {
             Vector3 CheckpointPosition = other.transform.position;
+            other.gameObject.transform.Find("Hram").GetComponent<Animator>().SetBool("IsActivated", true);
 
             CheckpointManager.LatestCheckpoint = new Vector3(CheckpointPosition.x, CheckpointPosition.y - 1.5f, CheckpointPosition.z);
         }
@@ -193,7 +198,7 @@ public class CharacterController2D : MonoBehaviour
             Pumpkin.GetComponent<PumpkinController>().PumpkinDeath.Play();
             Pumpkin.GetComponent<PumpkinController>().IsDead = true;
             StartCoroutine(DestroyObject(Pumpkin));
-            Launch(3f, 10f);
+            Launch(3f, 10.75f);
         }
 
         if (other.CompareTag("Health") && StatsController.Health != StatsController.HealthMax)
@@ -206,6 +211,11 @@ public class CharacterController2D : MonoBehaviour
         if (other.CompareTag("Spikes"))
         {
             StatsController.Health = 0;
+        }
+
+        if (other.CompareTag("Credits"))
+        {
+            MenuManager.Credits();
         }
 
         Invoke("EnableDamage", 0.825f);

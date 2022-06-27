@@ -12,6 +12,8 @@ TagManager:
   - Spikes
   - Music
   - CheckpointManager
+  - Credits
+  - DataController
   layers:
   - Default
   - TransparentFX

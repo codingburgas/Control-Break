@@ -6,7 +6,8 @@ public class DialogueTrigger : MonoBehaviour
 {
     private DialogueManager DialogueManager;
 
-    public Vector2 DialogueBoundaries;
+    [SerializeField]
+    private Vector2 DialogueBoundaries;
 
     void Start()
     {

@@ -6,80 +6,52 @@
             "Text": "Ouch... My head hurts sooo bad. What happened with me? What is this place?"
         },
         {
-            "Speaker": "Narrator",
-            "Text": "*Ganyos stomach purrs*"
+            "Speaker": "Ganyo",
+            "Text": "I have to find the way home before it goes dark. God knows how many beasts live here."
+        },
+        {
+            "Speaker": "Cat",
+            "Text": "WAAAAHHGGHFGDFG! Meow."
         },
         {
             "Speaker": "Ganyo",
-            "Text": "I wonder if there's something to eat around here."
+            "Text": "Oh, it's a kitty."
         },
         {
-            "Speaker": "Narrator",
-            "Text": "*Ganyo sees a house up in the distance*"
-        },
-        {
-            "Speaker": "Ganyo",
-            "Text": "What is that? Hopefully no one lives there."
-        },
-        {
-            "Speaker": "Narrator",
-            "Text": "*Ganyo finds food*"
+            "Speaker": "Cat",
+            "Text": "Hello, stranger."
         },
         {
             "Speaker": "Ganyo",
-            "Text": "Oooh, finally some food. This can will do me good for a few nights."
+            "Text": "Wh-! A talking cat! What is this?"
         },
         {
-            "Speaker": "Narrator",
-            "Text": "*Ganyo munches*"
-        },
-        {
-            "Speaker": "Narrator",
-            "Text": "*Ganyo is full*"
-        },
-        {
-            "Speaker": "Narrator",
-            "Text": "*The owner of the house walks in*"
-        },
-        {
-            "Speaker": "Lumberjack",
-            "Text": "Hey you, what are you doing in my house?"
+            "Speaker": "Kira",
+            "Text": "Call me Kira. Do you need something stranger, you look lost?"
         },
         {
             "Speaker": "Ganyo",
-            "Text": "WOAH? Who are you?"
+            "Text": "I am. I need to find the way out before dawn."
         },
         {
-            "Speaker": "Sevar",
-            "Text": "I am Sevar and I own this house."
+            "Speaker": "Kira",
+            "Text": "Hmm, I can't help you with that. Although I saw a strange looking cottage down the road."
         },
         {
-            "Speaker": "Ganyo",
-            "Text": "I'm really sorry. Where am I?"
-        },
-        {
-            "Speaker": "Sevar",
-            "Text": "You're in the Magic Forest of Dalemia."
+            "Speaker": "Kira",
+            "Text": "There are rumours of a very important lantern in it. Maybe it can help you?"
         },
         {
             "Speaker": "Ganyo",
-            "Text": "Da- what?"
+            "Text": "Thank you Kira."
         },
         {
-            "Speaker": "Sevar",
-            "Text": "Dalemia, the biggest of the Seven Kingdoms."
-        },
-        {
-            "Speaker": "Ganyo thinks to himself",
-            "Text": "How did I end up here? I've not even heard about this place. Let's ask him how to get out."
+            "Speaker": "Kira",
+            "Text": "But beware! There is a mysterious evil creature that lurks around the forest. We call it The Beast. If you see it, run!"
         },
         {
             "Speaker": "Ganyo",
-            "Text": "I'm really sorry for entering your house. Can you please show me the exit?"
-        },
-        {
-            "Speaker": "Sevar",
-            "Text": "You ain't going anywhere. Hahahahahaha!"
+            "Text": "I will, thanks again."
         }
     ]
 }
