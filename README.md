@@ -17,13 +17,16 @@
 </p>
 
 <h1>📖 About</h1>
-<h3> <big>  Hello everyone, we are Control Break and we are presenting our game called Soultern. This is a school adventure game project. It is a 2D single player platformer game,developed in C# where the main language is English.</h3>
+<h3> <big>  Hello everyone, we are Control Break and we are presenting our game called Soultern. This is a school adventure game project. It is a 2D single player platformer game, developed in C# where the main language is English.</h3>
 
 <h1>🪓 Plot</h1>
 <h3> <big>  It's been a tough night in one of your friends's house. On the way home, a tree branch falls and hits you. You faint and fall.  Later, waking up, you realise, you're somewhere you've never been before. Meet new friends, defeat vicious enemies, explore uncharted lands. Your objective is simple: Find the way home. </h3>
 
+<h1>📰 Website</h1>
+<h3> <big>  Our website is hosted and you can visit it here: <a href="http://soultern.cf/">Website</a></big></h3>
+
 <h1>🎬Trailer</h1>
-<h3><big> Hey, we made a trailer specially for you! Check it out: <a href="https://www.youtube.com/watch?v=K1Wq0-UdiLQ">Trailer</big></h3>
+<h3><big> Hey, we made a trailer specially for you! Check it out: <a href="https://www.youtube.com/watch?v=PWpchBXklkc">Trailer</a></big></h3>
 
 <h1>📄 Documentation</h1>
 <h3> ➤ <a href="https://github.com/codingburgas/Control-Break/blob/main/Documentation/Documentation.docx">Documentation</a><img src="https://cdn.worldvectorlogo.com/logos/word-1.svg" alt="Word" width="30" height="20"/> </h3>
