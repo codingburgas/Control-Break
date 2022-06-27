@@ -14,7 +14,10 @@
     background: url(../../images/videos/Soulter_Gif.gif);
     background-repeat:no-repeat;
     background-size: cover;
+    object-fit: cover;
+
   }
+  
 /*Style the box with the text and the buttons*/ 
   .main-bg {
     height: 10%;
@@ -24,7 +27,7 @@
     align-items: center;
     text-align: center;
     transition: 100ms linear;
-     
+
   }
   
   /*Title*/
